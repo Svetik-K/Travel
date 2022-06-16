@@ -14,6 +14,7 @@ body, html {
     --white: #FFFFFF;
     --orange: #F2785C;
     --marine: #0D606F;
+    --grey: #E5E5E5;
 }
 .button {
     font-family: 'Red Hat Text', sans-serif;
@@ -24,8 +25,15 @@ body, html {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
     cursor: pointer;
 }
-h1 {
-    font-family: 'Aleo', serif;
+.title {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4em;
+    line-height: 53px;
+    color: var(--orange);
+    text-align: center;
+    margin-top: 0;
 }
 .container {
     max-width: 1440px;
@@ -66,7 +74,7 @@ h1 {
     line-height: 21.17px; 
 }
 .navbar__list:last-child {
-    padding-right: 39px;
+    padding-right: 38px;
 }
 .navbar__list li a {
     text-decoration: none;
@@ -80,6 +88,8 @@ h1 {
 }
 
 /* Main */
+
+/* Intro */
 .intro {
     padding: 32px 428px 221px 120px;
     background-image: url(./assets/images/intro_bg.jpg);
@@ -104,7 +114,7 @@ h1 {
     font-family: 'Aleo', serif;
     font-style: italic;
     /* font-weight: 700; */
-    font-size: 2.0em;
+    font-size: 2em;
     line-height: 24px;
     letter-spacing: 0.5px;
     color: var(--white);
@@ -136,4 +146,51 @@ h1 {
     font-weight: 500;
     font-size: 2.4em;
     line-height: 32px;
+}
+
+/* Steps */
+
+.steps {
+    padding: 80px 132px 97px;
+    background-color: var(--grey);
+}
+.title-steps {
+    margin-bottom: 40px;
+}
+.steps__cards {
+    display: flex;
+    flex-direction: row;
+}
+.card {
+    height: 154px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.card p {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 24px;
+    color: var(--marine);
+    vertical-align: bottom;
+    margin: 0;
+}
+.card1 {
+    background: url(./assets/svg/cycle.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-right: 231px;
+}
+.card2 {
+    background: url(./assets/svg/calender.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-right: 160px;
+}
+.card3 {
+    background: url(./assets/svg/plane.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
 }
