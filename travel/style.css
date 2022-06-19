@@ -287,6 +287,7 @@ body {
 .stories__cards {
     background: url(./assets/images/stories_bg.jpg);
     background-repeat: no-repeat;
+    /* background-position: top - 61px; */
 }
 .bg-layer {
     background-color: rgba(255, 255, 255, 0.7);;
@@ -296,7 +297,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 40px 0 81px;
+    padding: 40px 0 41px;
     margin: 0 auto;
 }
 .story-card {
@@ -344,4 +345,35 @@ body {
 }
 .button-see {
     margin-top: 10px;
+}
+
+/* Footer styling */
+
+.footer {
+    padding: 14px 121px 13px 590px;
+    background: url(./assets/images/stories_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.footer__wrapper {
+    width: 729px;
+    height: 33px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.copyright {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6em;
+    line-height: 21px;
+    color: var(--white);
+}
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 19px;
 }
