@@ -27,6 +27,10 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
     cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+.button:hover {
+    transform: scale(1.06);
 }
 .title {
     font-family: 'Red Hat Text';
@@ -81,8 +85,26 @@ body {
     padding-right: 38px;
 }
 .navbar__list li a {
+    display: block;
+    position: relative;
     text-decoration: none;
     color: var(--white);
+    transition: all ease-in-out 0.5s;
+}
+.navbar__list li a:hover {
+    color: var(--grey);
+}
+.navbar__list li a::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 0%;
+    background-color: var(--grey);
+    transition: all ease-in-out 0.5s; 
+}
+.navbar__list li a:hover::after {
+    width: 100%;
 }
 .button-login {
     width: 103px;
@@ -210,16 +232,16 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Gallery section styling*/
+/* destinations section styling*/
 
-.gallery {
+.destinations {
     background-color: var(--grey);
     padding-bottom: 80px;
 }
-.title-gallery {
+.title-destinations {
     margin-bottom: 46px;
 }
-.gallery__cards {
+.destinations__cards {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -227,13 +249,18 @@ body {
     overflow: hidden;
     margin-bottom: 22px;
 }
-.gallery-card img {
+.destinations-card img {
     border-radius: 16px;
+    transition: all ease-in-out 0.5s;
 }
-.gallery-card {
+.destinations-card img:hover {
+    transform: scale(1.05);
+}
+.destinations-card {
     position: relative;
 }
-.gallery-card span {
+
+.destinations-card span {
     position: absolute;
     left: 15px;
     bottom: 42px;
@@ -244,7 +271,7 @@ body {
     line-height: 42px;
     color: var(--white);
 }
-.gallery__dots {
+.destinations__dots {
     width: 80px;
     height: 20px;
     display: flex;
@@ -287,7 +314,6 @@ body {
 .stories__cards {
     background: url(./assets/images/stories_bg.jpg);
     background-repeat: no-repeat;
-    /* background-position: top - 61px; */
 }
 .bg-layer {
     background-color: rgba(255, 255, 255, 0.7);;
@@ -310,6 +336,10 @@ body {
     height: 250px;
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
+    transition: all ease-in-out 0.5s; 
+}
+.story-card img:hover {
+    transform: scale(1.05);
 }
 .story-card-text {
     display: flex;
@@ -376,4 +406,10 @@ body {
     flex-direction: row;
     list-style-type: none;
     gap: 19px;
+}
+.social-icons li a img {
+    transition: all ease-in-out 0.5s; 
+}
+.social-icons li a img:hover {
+    transform: scale(1.1);
 }
