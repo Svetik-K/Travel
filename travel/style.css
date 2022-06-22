@@ -140,7 +140,6 @@ body {
 .intro__text {
     font-family: 'Aleo', serif;
     font-style: italic;
-    /* font-weight: 700; */
     font-size: 2em;
     line-height: 24px;
     letter-spacing: 0.5px;
@@ -232,7 +231,7 @@ body {
     background-repeat: no-repeat;
 }
 
-/* destinations section styling*/
+/* Destinations section styling*/
 
 .destinations {
     background-color: var(--grey);
