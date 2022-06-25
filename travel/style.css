@@ -63,10 +63,10 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-.header__logo {
+.logo {
     padding-bottom: 3px;
 }
-.navbar__list {
+.navigation {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -77,20 +77,20 @@ body {
     font-size: 1.6em;
     line-height: 21.17px; 
 }
-.navbar__list:last-child {
+.navigation:last-child {
     padding-right: 38px;
 }
-.navbar__list li a {
+.navigation li a {
     display: block;
     position: relative;
     text-decoration: none;
     color: var(--white);
     transition: all ease-in-out 0.5s;
 }
-.navbar__list li a:hover {
+.navigation li a:hover {
     color: var(--grey);
 }
-.navbar__list li a::after {
+.navigation li a::after {
     content: '';
     position: absolute;
     display: block;
@@ -99,10 +99,10 @@ body {
     background-color: var(--grey);
     transition: all ease-in-out 0.5s; 
 }
-.navbar__list li a:hover::after {
+.navigation li a:hover::after {
     width: 100%;
 }
-.button-login {
+.button_login {
     width: 103px;
     height: 41px;
     font-size: 1.6em;
@@ -124,7 +124,7 @@ body {
     width: 892px;
     height: 422px;
 }
-.intro__title {
+.intro-title {
     font-family: 'Aleo', serif;
     font-weight: 700;
     font-size: 8em;
@@ -133,7 +133,7 @@ body {
     margin-top: 0;
     margin-bottom: 32px;
 }
-.intro__text {
+.intro-text {
     font-family: 'Aleo', serif;
     font-style: italic;
     font-size: 2em;
@@ -169,7 +169,7 @@ body {
     line-height: 29px;
     color: var(--orange);
 }
-.button-start {
+.button_start {
     position: absolute;
     bottom: 51px;
     right: 18px;
@@ -186,7 +186,7 @@ body {
     padding: 80px 132px 97px;
     background-color: var(--grey);
 }
-.title-steps {
+.title_steps {
     margin-bottom: 40px;
 }
 .steps__cards {
@@ -209,19 +209,19 @@ body {
     vertical-align: bottom;
     margin: 0;
 }
-.card1 {
+.card_one {
     background: url(./assets/svg/cycle.svg);
     background-position: top center;
     background-repeat: no-repeat;
     margin-right: 231px;
 }
-.card2 {
+.card_two {
     background: url(./assets/svg/calender.svg);
     background-position: top center;
     background-repeat: no-repeat;
     margin-right: 160px;
 }
-.card3 {
+.card_three {
     background: url(./assets/svg/plane.svg);
     background-position: top center;
     background-repeat: no-repeat;
@@ -233,7 +233,7 @@ body {
     background-color: var(--grey);
     padding-bottom: 80px;
 }
-.title-destinations {
+.title_destinations {
     margin-bottom: 46px;
 }
 .destinations__cards {
@@ -284,7 +284,7 @@ body {
 .dot.active {
     background-color: var(--orange);
 }
-.button-arrow {
+.button_arrow {
     display: block;
     width: 228px;
     height: 59px;
@@ -303,7 +303,7 @@ body {
 
 /* Stories section styling */
 
-.title-stories {
+.title_stories {
     margin-bottom: 40px;
 }
 .stories__cards {
@@ -369,7 +369,7 @@ body {
     line-height: 24px;
     color: var(--marine);
 }
-.button-see {
+.button_see {
     margin-top: 10px;
 }
 
