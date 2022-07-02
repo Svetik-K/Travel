@@ -1,7 +1,9 @@
 .footer {
     max-width: $basic-width;
     margin: 0 auto;
-    padding: 14px 121px 13px 590px;
+    padding: 14px 121px 13px 0;
+    display: flex;
+    justify-content: flex-end;
     background: url(../assets/images/stories_bg.jpg);
     background-repeat: no-repeat;
     background-position: bottom;

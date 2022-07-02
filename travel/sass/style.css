@@ -174,7 +174,7 @@ body {
 }
 
 .search-field {
-  width: 851px;
+  width: 890px;
   height: 95px;
   padding: 0 0 0 41px;
   background: rgba(255, 255, 255, 0.7);
@@ -397,7 +397,7 @@ body {
 }
 
 .stories__wrapper {
-  max-width: 1400px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -406,7 +406,7 @@ body {
 }
 
 .footer__wrapper {
-  max-width: 729px;
+  width: 729px;
   height: 33px;
   display: flex;
   flex-direction: row;
@@ -436,7 +436,9 @@ body {
 .footer {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 14px 121px 13px 590px;
+  padding: 14px 121px 13px 0;
+  display: flex;
+  justify-content: flex-end;
   background: url(../assets/images/stories_bg.jpg);
   background-repeat: no-repeat;
   background-position: bottom;

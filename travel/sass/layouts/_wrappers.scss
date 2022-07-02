@@ -6,7 +6,7 @@
     align-items: center;
 }
 .stories__wrapper {
-    max-width: $content-width;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -14,7 +14,7 @@
     margin: 0 auto;
 }
 .footer__wrapper {
-    max-width: 729px;
+    width: 729px;
     height: 33px;
     display: flex;
     flex-direction: row;
