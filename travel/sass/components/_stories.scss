@@ -1,0 +1,59 @@
+.stories {
+    max-width: $basic-width;
+    margin: 0 auto;
+}
+.title_stories {
+    margin-bottom: 40px;
+}
+.stories__cards {
+    background: url(../assets/images/stories_bg.jpg);
+    background-repeat: no-repeat;
+}
+.bg-layer {
+    background-color: rgba(255, 255, 255, 0.7);;
+}
+
+.story-card {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    img {
+        width: 400px;
+        height: 250px;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        border-radius: 16px;
+        @extend %transition; 
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+.story-card-text {
+    display: flex;
+    flex-direction: column;
+}
+.card-title {
+    @extend %font-add;
+    @include font(3.5rem, 4.2rem, 400);
+    color: $color-marine;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+.card-text {
+    @extend %font-add;
+    @include font(2rem, 2.4rem, 400);
+    color: $color-marine;
+    text-align: left;
+    margin: 0;
+}
+.card-link {
+    @extend %font-add;
+    @include font(2rem, 2.4rem, 700);
+    color: $color-marine;
+}
+.button_see {
+    margin-top: 10px;
+}

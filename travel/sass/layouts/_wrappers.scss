@@ -1,0 +1,23 @@
+.header__wrapper {
+    max-width: $content-width;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.stories__wrapper {
+    max-width: $content-width;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 0 41px;
+    margin: 0 auto;
+}
+.footer__wrapper {
+    max-width: 729px;
+    height: 33px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

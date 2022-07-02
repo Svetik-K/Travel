@@ -1,0 +1,40 @@
+.button {
+    @extend %font-main;
+    background-color: $color-marine;
+    color: $color-light;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    @extend %transition;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-dark;
+    }
+}
+.button_login {
+    width: 103px;
+    height: 41px;
+    @include font(1.6rem, 2.1rem, 500);
+}
+.button_start {
+    position: absolute;
+    bottom: 51px;
+    right: 18px;
+    width: 228px;
+    height: 59px;
+    @include font(2.4rem, 3.2rem, 500);
+}
+.button_arrow {
+    display: block;
+    width: 228px;
+    height: 59px;
+    @include font(2.4rem, 3.2rem, 500);
+    padding-left: 81px;
+    padding-right: 31px;
+    background: url(../assets/svg/arrow-right.svg), $color-marine;
+    background-repeat: no-repeat;
+    background-position: center left 31px;
+    border: none;
+    margin: 0 auto;
+}

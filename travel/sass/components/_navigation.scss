@@ -1,0 +1,43 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 42px;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.6rem;
+    line-height: 2.1rem; 
+
+    &:last-child {
+        padding-right: 38px;
+    }
+}
+.navigation__link{
+    display: block;
+    position: relative;
+    @extend %font-main;
+    @include font(1.6rem, 2.1rem, 500);
+    color: $color-light;
+    text-decoration: none;
+    @extend %transition;
+
+    &:hover {
+        color: $color-grey;
+
+        &::after {
+            width: 100%;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 4px;
+        width: 0%;
+        background-color: $color-grey;
+        @extend %transition;
+    }
+}
+
