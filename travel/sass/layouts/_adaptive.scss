@@ -1,0 +1,107 @@
+@media only screen and (max-width: 1280px) {
+    .navigation {
+        gap: 25px;
+    }
+    .steps__cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        justify-content: center;
+    }
+    .card_two {
+        padding-left: 0px;
+    }
+    .story-card img {
+        width: 350px;
+        height: 200px;
+    }
+    .card-title {
+        @include font(3.1rem, 3.8rem, 400);
+        margin-bottom: 10px;
+    }
+    .card-text {
+        @include font(1.6rem, 2rem, 400);
+    }
+    .card-link {
+        @include font(1.6rem, 2rem, 700);
+    }
+    .stories__wrapper {
+        padding: 40px 50px 41px;
+    }
+
+}
+@media only screen and (max-width: 1120px) {
+    .logo__text {
+        display: none;
+    }
+    .intro__block {
+        width: 690px;
+        height: 378px;
+    }
+    .intro-title {
+        @include font(6rem, 7.6rem, 700);
+    }
+    .intro-text {
+        @include font(1.6rem, 2rem, 400, italic);
+    }
+    .search-field {
+        width: 690px;
+    }
+
+}
+@media only screen and (max-width: 960px) {
+    .hamburger {
+        display: block;
+    }
+    .header__navigation {
+        display: none;
+    }
+    .intro__block {
+        width: 540px;
+        height: 353px;
+    }
+    .intro-title {
+        @include font(5rem, 6.6rem, 700);
+    }
+    .intro-text {
+        @include font(1.2rem, 1.6rem, 400, italic);
+    }
+    .search-field {
+        width: 540px;
+        @include font(1.8rem, 2.1rem, 400, italic);
+    
+        &:focus {
+            @include font(1.8rem, 2.1rem, 400, italic);
+
+        }
+    }
+    ::placeholder {
+        @include font(1.8rem, 2.1rem, 400, italic);
+    }
+    .story-card img {
+        width: 300px;
+        height: 150px;
+    }
+    .card-title {
+        @include font(2.1rem, 2.8rem, 400);
+        margin-bottom: 5px;
+    }
+    .card-text {
+        @include font(1.2rem, 1.6rem, 400);
+    }
+    .card-link {
+        @include font(1.2rem, 1.6rem, 700);
+    }
+}
+@media only screen and (max-width: 860px) {
+    .footer {
+        padding: 14px 20px 13px;
+        justify-content: stretch;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .stories__wrapper {
+        padding: 40px 30px 41px;
+    }
+
+}

@@ -28,6 +28,8 @@
 .search-field {
     width: 890px;
     height: 95px;
+    @extend %font-add;
+    @include font(2.4rem, 2.9rem, 400, italic);
     padding: 0 0 0 41px;
     background: rgba(255, 255, 255, 0.7);
     border: none;

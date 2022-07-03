@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400&display=swap");
-.button, .navigation__link, .navigation__link::after, .destinations__cards img, .story-card img, .icon__link img {
+@import url("https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap");
+.button, .navigation__link, .navigation__link::after, .destinations__cards img, .story-card img, .hamburger, .icon__link img {
   transition: all ease-in-out 0.5s;
 }
 
@@ -8,7 +9,7 @@
   font-family: 'Red Hat Text', sans-serif;
 }
 
-.intro-title, .intro-text, .search-field:focus, ::placeholder, .card span, .card-title, .card-text, .card-link {
+.intro-title, .intro-text, .search-field, .search-field:focus, ::placeholder, .card span, .card-title, .card-text, .card-link {
   font-family: 'Aleo', serif;
 }
 
@@ -176,6 +177,10 @@ body {
 .search-field {
   width: 890px;
   height: 95px;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  font-weight: 400;
+  font-style: italic;
   padding: 0 0 0 41px;
   background: rgba(255, 255, 255, 0.7);
   border: none;
@@ -213,7 +218,6 @@ body {
 .steps__cards {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -326,6 +330,7 @@ body {
 
 .stories__cards {
   background: url(../assets/images/stories_bg.jpg);
+  background-position: center bottom -50px;
   background-repeat: no-repeat;
 }
 
@@ -429,8 +434,26 @@ body {
   box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
-.logo {
-  padding-bottom: 3px;
+.logo__text {
+  font-family: 'Magra';
+  font-size: 3.2rem;
+  line-height: 3.9rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #FFFFFF;
+  padding: 0 5px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin-bottom: 4px;
+  background-color: #FFFFFF;
 }
 
 .footer {
@@ -441,7 +464,7 @@ body {
   justify-content: flex-end;
   background: url(../assets/images/stories_bg.jpg);
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: bottom center;
 }
 
 .copyright {
@@ -461,5 +484,151 @@ body {
 
 .icon__link img:hover {
   transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1280px) {
+  .navigation {
+    gap: 25px;
+  }
+  .steps__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+  }
+  .card_two {
+    padding-left: 0px;
+  }
+  .story-card img {
+    width: 350px;
+    height: 200px;
+  }
+  .card-title {
+    font-size: 3.1rem;
+    line-height: 3.8rem;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 10px;
+  }
+  .card-text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .card-link {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .stories__wrapper {
+    padding: 40px 50px 41px;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .logo__text {
+    display: none;
+  }
+  .intro__block {
+    width: 690px;
+    height: 378px;
+  }
+  .intro-title {
+    font-size: 6rem;
+    line-height: 7.6rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .intro-text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .search-field {
+    width: 690px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .hamburger {
+    display: block;
+  }
+  .header__navigation {
+    display: none;
+  }
+  .intro__block {
+    width: 540px;
+    height: 353px;
+  }
+  .intro-title {
+    font-size: 5rem;
+    line-height: 6.6rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .intro-text {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .search-field {
+    width: 540px;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .search-field:focus {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+  ::placeholder {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .story-card img {
+    width: 300px;
+    height: 150px;
+  }
+  .card-title {
+    font-size: 2.1rem;
+    line-height: 2.8rem;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 5px;
+  }
+  .card-text {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .card-link {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .footer {
+    padding: 14px 20px 13px;
+    justify-content: stretch;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .stories__wrapper {
+    padding: 40px 30px 41px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
