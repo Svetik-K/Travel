@@ -8,12 +8,17 @@
     margin-bottom: 46px;
 }
 .destinations__cards {
+    max-width: $basic-width;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     gap: 60px;
     overflow: hidden;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
+}
+.destinations-card {
+    position: relative;
+    width: 55.55%;
+    height: auto;
 
     img {
         border-radius: 16px;
@@ -23,9 +28,6 @@
             transform: scale(1.05);
         }
     }
-}
-.destinations-card {
-    position: relative;
 
     span {
         position: absolute;
@@ -43,7 +45,7 @@
     flex-direction: row;
     text-align: center;
     gap: 10px;
-    margin: 0 auto 39px;
+    margin: 0 auto 40px;
 }
 .dot {
     width: 20px;

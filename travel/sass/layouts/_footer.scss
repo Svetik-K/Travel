@@ -1,9 +1,6 @@
 .footer {
     max-width: $basic-width;
     margin: 0 auto;
-    padding: 14px 121px 13px 0;
-    display: flex;
-    justify-content: flex-end;
     background: url(../assets/images/stories_bg.jpg);
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -19,6 +16,7 @@
     flex-direction: row;
     list-style-type: none;
     gap: 19px;
+    margin: 0;
 }
 .icon__link img {
     @extend %transition;

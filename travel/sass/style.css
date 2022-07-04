@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap");
-.button, .navigation__link, .navigation__link::after, .destinations__cards img, .story-card img, .hamburger, .icon__link img {
+.button, .navigation__link, .navigation__link::after, .destinations-card img, .story-card img, .hamburger, .icon__link img {
   transition: all ease-in-out 0.5s;
 }
 
@@ -9,7 +9,7 @@
   font-family: 'Red Hat Text', sans-serif;
 }
 
-.intro-title, .intro-text, .search-field, .search-field:focus, ::placeholder, .card span, .card-title, .card-text, .card-link {
+.intro__title, .intro__text, .search-field, .search-field:focus, ::placeholder, .card span, .card-title, .card-text, .card-link {
   font-family: 'Aleo', serif;
 }
 
@@ -68,7 +68,7 @@ body {
 
 .button_start {
   position: absolute;
-  bottom: 51px;
+  bottom: 18px;
   right: 18px;
   width: 228px;
   height: 59px;
@@ -123,7 +123,7 @@ body {
 }
 
 .navigation__link:hover {
-  color: #E5E5E5;
+  color: #FFFFFF;
 }
 
 .navigation__link:hover::after {
@@ -136,13 +136,12 @@ body {
   display: block;
   height: 4px;
   width: 0%;
-  background-color: #E5E5E5;
+  background-color: #FFFFFF;
 }
 
 .intro {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 32px 0 221px 120px;
   background-image: url(../assets/images/intro_bg.jpg);
   background-position: center -90px;
   background-repeat: no-repeat;
@@ -150,21 +149,19 @@ body {
 
 .intro__block {
   position: relative;
-  width: 892px;
-  height: 422px;
+  max-width: 74.3%;
 }
 
-.intro-title {
+.intro__title {
   font-size: 8rem;
   line-height: 9.6rem;
   font-weight: 700;
   font-style: normal;
   color: #FFFFFF;
-  margin-top: 0;
-  margin-bottom: 32px;
+  margin: 0 0 32px;
 }
 
-.intro-text {
+.intro__text {
   font-size: 2rem;
   line-height: 2.4rem;
   font-weight: 700;
@@ -175,13 +172,12 @@ body {
 }
 
 .search-field {
-  width: 890px;
-  height: 95px;
+  width: 100%;
   font-size: 2.4rem;
   line-height: 2.9rem;
   font-weight: 400;
   font-style: italic;
-  padding: 0 0 0 41px;
+  padding: 33px 0 33px 41px;
   background: rgba(255, 255, 255, 0.7);
   border: none;
   border-radius: 16px;
@@ -207,7 +203,6 @@ body {
 .steps {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 80px 132px 97px;
   background-color: #FFFFFF;
 }
 
@@ -217,12 +212,11 @@ body {
 
 .steps__cards {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .card {
-  height: 154px;
+  height: 153px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -246,7 +240,7 @@ body {
   background: url(../assets/svg/calender.svg);
   background-position: top right 60px;
   background-repeat: no-repeat;
-  padding-left: 71px;
+  padding-left: 69px;
 }
 
 .card_three {
@@ -267,24 +261,26 @@ body {
 }
 
 .destinations__cards {
+  max-width: 1440px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   gap: 60px;
   overflow: hidden;
-  margin-bottom: 22px;
-}
-
-.destinations__cards img {
-  border-radius: 16px;
-}
-
-.destinations__cards img:hover {
-  transform: scale(1.05);
+  margin-bottom: 24px;
 }
 
 .destinations-card {
   position: relative;
+  width: 55.55%;
+  height: auto;
+}
+
+.destinations-card img {
+  border-radius: 16px;
+}
+
+.destinations-card img:hover {
+  transform: scale(1.05);
 }
 
 .destinations-card span {
@@ -305,7 +301,7 @@ body {
   flex-direction: row;
   text-align: center;
   gap: 10px;
-  margin: 0 auto 39px;
+  margin: 0 auto 40px;
 }
 
 .dot {
@@ -345,8 +341,7 @@ body {
 }
 
 .story-card img {
-  width: 400px;
-  height: 250px;
+  width: 33.33%;
   filter: drop-shadow(0px 4px 4px #0D606F);
   border-radius: 16px;
   cursor: pointer;
@@ -393,16 +388,27 @@ body {
   margin-top: 10px;
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .header__wrapper {
-  max-width: 1400px;
-  height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 18.5px 0;
+}
+
+.intro__wrapper {
+  padding: 32px 0 255px;
+}
+
+.steps__wrapper {
+  padding: 80px 11.5px 97px;
 }
 
 .stories__wrapper {
-  max-width: 1200px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -411,8 +417,7 @@ body {
 }
 
 .footer__wrapper {
-  width: 729px;
-  height: 33px;
+  padding: 14px 0 13px 470px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -424,12 +429,11 @@ body {
   margin: 0 auto;
   background: url(../assets/images/intro_bg.jpg);
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: top center;
 }
 
 .layer {
   position: relative;
-  padding: 25px 120px;
   background: rgba(242, 120, 92, 0.7);
   box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
@@ -459,9 +463,6 @@ body {
 .footer {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 14px 121px 13px 0;
-  display: flex;
-  justify-content: flex-end;
   background: url(../assets/images/stories_bg.jpg);
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -480,6 +481,7 @@ body {
   flex-direction: row;
   list-style-type: none;
   gap: 19px;
+  margin: 0;
 }
 
 .icon__link img:hover {
@@ -487,116 +489,38 @@ body {
 }
 
 @media only screen and (max-width: 1280px) {
-  .navigation {
-    gap: 25px;
+  .header__wrapper {
+    padding: 18.5px 20px;
   }
-  .steps__cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
-    justify-content: center;
-  }
-  .card_two {
-    padding-left: 0px;
-  }
-  .story-card img {
-    width: 350px;
-    height: 200px;
-  }
-  .card-title {
-    font-size: 3.1rem;
-    line-height: 3.8rem;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 10px;
-  }
-  .card-text {
-    font-size: 1.6rem;
-    line-height: 2rem;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .card-link {
-    font-size: 1.6rem;
-    line-height: 2rem;
-    font-weight: 700;
-    font-style: normal;
+  .intro__wrapper {
+    padding: 32px 20px 255px;
   }
   .stories__wrapper {
-    padding: 40px 50px 41px;
+    padding: 40px 20px 41px;
+  }
+  .footer__wrapper {
+    padding: 14px 20px 13px;
   }
 }
 
-@media only screen and (max-width: 1120px) {
-  .logo__text {
-    display: none;
+@media only screen and (max-width: 1080px) {
+  .title {
+    font-size: 3rem;
+    line-height: 4.3rem;
+    font-weight: 500;
+    font-style: normal;
   }
-  .intro__block {
-    width: 690px;
-    height: 378px;
-  }
-  .intro-title {
+  .intro__title {
     font-size: 6rem;
     line-height: 7.6rem;
     font-weight: 700;
     font-style: normal;
   }
-  .intro-text {
+  .intro__text {
     font-size: 1.6rem;
     line-height: 2rem;
     font-weight: 400;
     font-style: italic;
-  }
-  .search-field {
-    width: 690px;
-  }
-}
-
-@media only screen and (max-width: 960px) {
-  .hamburger {
-    display: block;
-  }
-  .header__navigation {
-    display: none;
-  }
-  .intro__block {
-    width: 540px;
-    height: 353px;
-  }
-  .intro-title {
-    font-size: 5rem;
-    line-height: 6.6rem;
-    font-weight: 700;
-    font-style: normal;
-  }
-  .intro-text {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    font-weight: 400;
-    font-style: italic;
-  }
-  .search-field {
-    width: 540px;
-    font-size: 1.8rem;
-    line-height: 2.1rem;
-    font-weight: 400;
-    font-style: italic;
-  }
-  .search-field:focus {
-    font-size: 1.8rem;
-    line-height: 2.1rem;
-    font-weight: 400;
-    font-style: italic;
-  }
-  ::placeholder {
-    font-size: 1.8rem;
-    line-height: 2.1rem;
-    font-weight: 400;
-    font-style: italic;
-  }
-  .story-card img {
-    width: 300px;
-    height: 150px;
   }
   .card-title {
     font-size: 2.1rem;
@@ -606,6 +530,21 @@ body {
     margin-bottom: 5px;
   }
   .card-text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .card-link {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .card-text {
     font-size: 1.2rem;
     line-height: 1.6rem;
     font-weight: 400;
@@ -614,21 +553,8 @@ body {
   .card-link {
     font-size: 1.2rem;
     line-height: 1.6rem;
-    font-weight: 700;
+    font-weight: 400;
     font-style: normal;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .footer {
-    padding: 14px 20px 13px;
-    justify-content: stretch;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .stories__wrapper {
-    padding: 40px 30px 41px;
   }
 }
 /*# sourceMappingURL=style.css.map */

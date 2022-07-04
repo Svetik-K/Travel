@@ -1,23 +1,171 @@
+
+// @media only screen and (max-width: 768px) {
+//     .button_start {
+//         width: 92px;
+//         height: 30px;
+//         @include font(1.1rem, 1.5rem, 500);
+//     }
+//     .intro__block {
+//         width: 420px;
+//         height: 310px;
+//     }
+//     .intro-title {
+//         @include font(4rem, 5.6rem, 700);
+//     }
+//     .intro-text {
+//         @include font(1.2rem, 1.6rem, 400, italic);
+//     }
+//     .search-field {
+//         width: 420px;
+//         height: 48px;
+//         @include font(1.8rem, 2.1rem, 400, italic);
+    
+//         &:focus {
+//             @include font(1.8rem, 2.1rem, 400, italic);
+//         }
+//     }
+//     ::placeholder {
+//         @include font(1.8rem, 2.1rem, 400, italic);
+//     }
+//     .stories__wrapper {
+//         padding: 40px 30px 41px;
+//     }
+//     .story-card img {
+//         width: 250px;
+//         height: 150px;
+//     }
+//     .card-title {
+//         @include font(1.7rem, 2.4rem, 400);
+//     }
+//     .card-text {
+//         @include font(1.2rem, 1.6rem, 400);
+//     }
+//     .card-link {
+//         @include font(1.2rem, 1.6rem, 700);
+//     }
+//     .stories__wrapper {
+//         padding: 40px 15px 41px;
+//     }
+
+// }
+// @media only screen and (max-width: 700px) {
+//     .story-card img {
+//         width: 155px;
+//         height: 130px;
+//     }
+//     .card-title {
+//         @include font(1.1rem, 1.3rem, 400);
+//         margin-bottom: 10px;
+//     }
+//     .card-text {
+//         @include font(0.9rem, 1.1rem, 400);
+//     }
+//     .card-link {
+//         @include font(0.9rem, 1.1rem, 700);
+//     }
+// }
+// @media only screen and (max-width: 560px) {
+//     .title {
+//         @include font(1.4rem, 1.9rem, 500);
+//     }
+//     .button {
+//         width: 92px;
+//         height: 30px;
+//         @include font(1.1rem, 1.5rem, 500);
+//         border-radius: 10px;
+//     }
+//     .button_arrow {
+//         width: 92px;
+//         height: 30px;
+//         background: url(../assets/svg/arrow_small.svg), $color-marine;
+//         background-repeat: no-repeat;
+//         background-position: center left 14px;
+//         padding: 0 0 0 30px;
+//     }
+  
+
+// }
+// @media only screen and (max-width: 490px) {
+//     .intro__block {
+//         width: 360px;
+//     }
+//     .search-field {
+//         width: 360px;
+//         padding: 0 0 0 16px;
+//     }
+//     .footer__wrapper {
+//         justify-content: center;
+//     }
+//     .copyright {
+//         display: none;
+//     }
+// }
+// @media only screen and (max-width: 390px) {
+//     .layer {
+//         position: static;
+//         background: transparent;
+//         padding: 43px 15px 25px;
+//     }
+//     // .header {
+//     //     background-size: cover;
+//     // }
+//     .intro {
+//         background-position: center top -108px;
+//         padding: 67px 0 61px 15px;
+//     }
+//     .intro__block {
+//         width: 360px;
+//         height: 50px;
+//         justify-content: center;
+//     }
+//     .intro-title {
+//         display: none;
+//     }
+//     .intro-text {
+//         display: none;
+//     }
+//     .search-field {
+//         width: 360px;
+//         height: 48px;
+//         @include font(1.4rem, 1.7rem, 400, italic);
+    
+//         &:focus {
+//             @include font(1.4rem, 1.7rem, 400, italic);
+
+//         }
+//     }
+//     ::placeholder {
+//         @include font(1.4rem, 1.7rem, 400, italic);
+//     }
+// }
+
 @media only screen and (max-width: 1280px) {
-    .navigation {
-        gap: 25px;
+    .header__wrapper {
+        padding: 18.5px 20px;
     }
-    .steps__cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 60px;
-        justify-content: center;
+    .intro__wrapper {
+        padding: 32px 20px 255px;
     }
-    .card_two {
-        padding-left: 0px;
+    .stories__wrapper {
+        padding: 40px 20px 41px;
     }
-    .story-card img {
-        width: 350px;
-        height: 200px;
+    .footer__wrapper {
+        padding: 14px 20px 13px; 
+    }
+}
+@media only screen and (max-width: 1080px) {
+    .title {
+        @include font(3rem, 4.3rem, 500);
+    }
+    .intro__title {
+        @include font(6rem, 7.6rem, 700);
+    }
+    .intro__text {
+        @include font(1.6rem, 2rem, 400, italic);
     }
     .card-title {
-        @include font(3.1rem, 3.8rem, 400);
-        margin-bottom: 10px;
+        @include font(2.1rem, 2.8rem, 400);
+            margin-bottom: 5px;
     }
     .card-text {
         @include font(1.6rem, 2rem, 400);
@@ -25,83 +173,12 @@
     .card-link {
         @include font(1.6rem, 2rem, 700);
     }
-    .stories__wrapper {
-        padding: 40px 50px 41px;
-    }
-
 }
-@media only screen and (max-width: 1120px) {
-    .logo__text {
-        display: none;
-    }
-    .intro__block {
-        width: 690px;
-        height: 378px;
-    }
-    .intro-title {
-        @include font(6rem, 7.6rem, 700);
-    }
-    .intro-text {
-        @include font(1.6rem, 2rem, 400, italic);
-    }
-    .search-field {
-        width: 690px;
-    }
-
-}
-@media only screen and (max-width: 960px) {
-    .hamburger {
-        display: block;
-    }
-    .header__navigation {
-        display: none;
-    }
-    .intro__block {
-        width: 540px;
-        height: 353px;
-    }
-    .intro-title {
-        @include font(5rem, 6.6rem, 700);
-    }
-    .intro-text {
-        @include font(1.2rem, 1.6rem, 400, italic);
-    }
-    .search-field {
-        width: 540px;
-        @include font(1.8rem, 2.1rem, 400, italic);
-    
-        &:focus {
-            @include font(1.8rem, 2.1rem, 400, italic);
-
-        }
-    }
-    ::placeholder {
-        @include font(1.8rem, 2.1rem, 400, italic);
-    }
-    .story-card img {
-        width: 300px;
-        height: 150px;
-    }
-    .card-title {
-        @include font(2.1rem, 2.8rem, 400);
-        margin-bottom: 5px;
-    }
+@media only screen and (max-width: 970px) {
     .card-text {
         @include font(1.2rem, 1.6rem, 400);
     }
     .card-link {
-        @include font(1.2rem, 1.6rem, 700);
+        @include font(1.2rem, 1.6rem, 400);
     }
-}
-@media only screen and (max-width: 860px) {
-    .footer {
-        padding: 14px 20px 13px;
-        justify-content: stretch;
-    }
-}
-@media only screen and (max-width: 768px) {
-    .stories__wrapper {
-        padding: 40px 30px 41px;
-    }
-
 }

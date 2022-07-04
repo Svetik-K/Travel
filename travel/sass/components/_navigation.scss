@@ -23,7 +23,7 @@
     @extend %transition;
 
     &:hover {
-        color: $color-grey;
+        color: $color-light;
 
         &::after {
             width: 100%;
@@ -36,7 +36,7 @@
         display: block;
         height: 4px;
         width: 0%;
-        background-color: $color-grey;
+        background-color: $color-light;
         @extend %transition;
     }
 }

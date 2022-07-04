@@ -1,24 +1,21 @@
 .intro {
     max-width: $basic-width;
     margin: 0 auto;
-    padding: 32px 0 221px 120px;
     background-image: url(../assets/images/intro_bg.jpg);
     background-position: center -90px;
     background-repeat: no-repeat;
 }
 .intro__block {
     position: relative;
-    width: 892px;
-    height: 422px;
+    max-width: 74.3%;
 }
-.intro-title {
+.intro__title {
     @extend %font-add;
     @include font(8rem, 9.6rem, 700);
     color: $color-light;
-    margin-top: 0;
-    margin-bottom: 32px;
+    margin: 0 0 32px;
 }
-.intro-text {
+.intro__text {
     @extend %font-add;
     @include font(2rem, 2.4rem, 700, italic);
     letter-spacing: 0.5px;
@@ -26,11 +23,10 @@
     margin-bottom: 46px;
 }
 .search-field {
-    width: 890px;
-    height: 95px;
+    width: 100%;
     @extend %font-add;
     @include font(2.4rem, 2.9rem, 400, italic);
-    padding: 0 0 0 41px;
+    padding: 33px 0 33px 41px;
     background: rgba(255, 255, 255, 0.7);
     border: none;
     border-radius: 16px;

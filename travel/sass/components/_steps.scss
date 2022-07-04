@@ -1,7 +1,6 @@
 .steps {
     max-width: $basic-width;
     margin: 0 auto;
-    padding: 80px 132px 97px;
     background-color: $color-light;
 }
 .title_steps {
@@ -9,11 +8,10 @@
 }
 .steps__cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 .card {
-    height: 154px;
+    height: 153px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -33,7 +31,7 @@
     background: url(../assets/svg/calender.svg);
     background-position: top right 60px;
     background-repeat: no-repeat;
-    padding-left: 71px;
+    padding-left: 69px;
 }
 .card_three {
     background: url(../assets/svg/plane.svg);
