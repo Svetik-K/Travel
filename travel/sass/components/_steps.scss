@@ -16,7 +16,7 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    span {
+    &__text {
         @extend %font-add;
         @include font(2rem, 2.4rem, 400);
         color: $color-marine

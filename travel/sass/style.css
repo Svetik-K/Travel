@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap");
-.button, .navigation__link, .navigation__link::after, .destinations-card img, .story-card img, .hamburger, .icon__link img {
+.button, .navigation__link, .navigation__link::after, .destinations-card__image, .story-card__image, .hamburger, .icon__link img {
   transition: all ease-in-out 0.5s;
 }
 
-.title, .button, .navigation__link, .destinations-card span, .copyright {
+.title, .button, .navigation__link, .destinations-card__text, .copyright {
   font-family: 'Red Hat Text', sans-serif;
 }
 
-.intro__title, .intro__text, .search-field, .search-field:focus, ::placeholder, .card span, .card-title, .card-text, .card-link {
+.intro__title, .intro__text, .search-field, .search-field:focus, ::placeholder, .card__text, .card-title, .card-text, .card-link {
   font-family: 'Aleo', serif;
 }
 
@@ -222,7 +222,7 @@ body {
   justify-content: flex-end;
 }
 
-.card span {
+.card__text {
   font-size: 2rem;
   line-height: 2.4rem;
   font-weight: 400;
@@ -275,15 +275,15 @@ body {
   height: auto;
 }
 
-.destinations-card img {
+.destinations-card__image {
   border-radius: 16px;
 }
 
-.destinations-card img:hover {
+.destinations-card__image:hover {
   transform: scale(1.05);
 }
 
-.destinations-card span {
+.destinations-card__text {
   position: absolute;
   left: 15px;
   bottom: 42px;
@@ -340,18 +340,18 @@ body {
   gap: 40px;
 }
 
-.story-card img {
+.story-card__image {
   width: 33.33%;
   filter: drop-shadow(0px 4px 4px #0D606F);
   border-radius: 16px;
   cursor: pointer;
 }
 
-.story-card img:hover {
+.story-card__image:hover {
   transform: scale(1.05);
 }
 
-.story-card-text {
+.story-card__text {
   display: flex;
   flex-direction: column;
 }
@@ -525,7 +525,7 @@ body {
   .card-title {
     font-size: 2.1rem;
     line-height: 2.8rem;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
     margin-bottom: 5px;
   }
@@ -544,6 +544,107 @@ body {
 }
 
 @media only screen and (max-width: 970px) {
+  .card__text {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .card_two {
+    background-position: top center;
+    padding-left: 0;
+  }
+  .card-text {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .card-link {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header__wrapper {
+    padding: 18.5px 15px;
+  }
+  .intro__wrapper {
+    padding: 32px 15px 255px;
+  }
+  .stories__wrapper {
+    padding: 40px 15px 41px;
+  }
+  .footer__wrapper {
+    padding: 14px 15px 13px;
+  }
+  .button {
+    width: 92px;
+    height: 30px;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    font-style: normal;
+    border-radius: 10px;
+  }
+  .button_start {
+    bottom: 32px;
+  }
+  .button_arrow {
+    background: url(../assets/svg/arrow_small.svg), #0D606F;
+    background-repeat: no-repeat;
+    background-position: center left 14px;
+    padding: 0 0 0 30px;
+  }
+  .logo__text {
+    display: none;
+  }
+  .header__navigation {
+    display: none;
+  }
+  .button_login {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .title {
+    font-size: 2rem;
+    line-height: 3.3rem;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .intro__title {
+    font-size: 4rem;
+    line-height: 5.6rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .intro__text {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .steps__wrapper {
+    padding: 20px 11.5px 20px;
+  }
+  .destinations {
+    padding-bottom: 20px;
+  }
+  .stories__wrapper {
+    gap: 15px;
+    padding: 10px 15px 13px;
+  }
+  .title_stories {
+    margin-bottom: 10px;
+  }
+  .story-card {
+    gap: 10px;
+  }
   .card-text {
     font-size: 1.2rem;
     line-height: 1.6rem;
@@ -553,8 +654,60 @@ body {
   .card-link {
     font-size: 1.2rem;
     line-height: 1.6rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .search-field {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-weight: 400;
+    font-style: italic;
+    padding: 13.5px 9px 13.5px 16.5px;
+  }
+  .search-field:focus {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+  ::placeholder {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .button_start {
+    bottom: 10px;
+  }
+  .card-title {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .card-text {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
     font-weight: 400;
     font-style: normal;
+  }
+  .card-link {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .copyright {
+    display: none;
+  }
+  .footer__wrapper {
+    justify-content: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

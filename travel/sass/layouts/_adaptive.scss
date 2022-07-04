@@ -1,105 +1,4 @@
 
-// @media only screen and (max-width: 768px) {
-//     .button_start {
-//         width: 92px;
-//         height: 30px;
-//         @include font(1.1rem, 1.5rem, 500);
-//     }
-//     .intro__block {
-//         width: 420px;
-//         height: 310px;
-//     }
-//     .intro-title {
-//         @include font(4rem, 5.6rem, 700);
-//     }
-//     .intro-text {
-//         @include font(1.2rem, 1.6rem, 400, italic);
-//     }
-//     .search-field {
-//         width: 420px;
-//         height: 48px;
-//         @include font(1.8rem, 2.1rem, 400, italic);
-    
-//         &:focus {
-//             @include font(1.8rem, 2.1rem, 400, italic);
-//         }
-//     }
-//     ::placeholder {
-//         @include font(1.8rem, 2.1rem, 400, italic);
-//     }
-//     .stories__wrapper {
-//         padding: 40px 30px 41px;
-//     }
-//     .story-card img {
-//         width: 250px;
-//         height: 150px;
-//     }
-//     .card-title {
-//         @include font(1.7rem, 2.4rem, 400);
-//     }
-//     .card-text {
-//         @include font(1.2rem, 1.6rem, 400);
-//     }
-//     .card-link {
-//         @include font(1.2rem, 1.6rem, 700);
-//     }
-//     .stories__wrapper {
-//         padding: 40px 15px 41px;
-//     }
-
-// }
-// @media only screen and (max-width: 700px) {
-//     .story-card img {
-//         width: 155px;
-//         height: 130px;
-//     }
-//     .card-title {
-//         @include font(1.1rem, 1.3rem, 400);
-//         margin-bottom: 10px;
-//     }
-//     .card-text {
-//         @include font(0.9rem, 1.1rem, 400);
-//     }
-//     .card-link {
-//         @include font(0.9rem, 1.1rem, 700);
-//     }
-// }
-// @media only screen and (max-width: 560px) {
-//     .title {
-//         @include font(1.4rem, 1.9rem, 500);
-//     }
-//     .button {
-//         width: 92px;
-//         height: 30px;
-//         @include font(1.1rem, 1.5rem, 500);
-//         border-radius: 10px;
-//     }
-//     .button_arrow {
-//         width: 92px;
-//         height: 30px;
-//         background: url(../assets/svg/arrow_small.svg), $color-marine;
-//         background-repeat: no-repeat;
-//         background-position: center left 14px;
-//         padding: 0 0 0 30px;
-//     }
-  
-
-// }
-// @media only screen and (max-width: 490px) {
-//     .intro__block {
-//         width: 360px;
-//     }
-//     .search-field {
-//         width: 360px;
-//         padding: 0 0 0 16px;
-//     }
-//     .footer__wrapper {
-//         justify-content: center;
-//     }
-//     .copyright {
-//         display: none;
-//     }
-// }
 // @media only screen and (max-width: 390px) {
 //     .layer {
 //         position: static;
@@ -153,6 +52,7 @@
         padding: 14px 20px 13px; 
     }
 }
+
 @media only screen and (max-width: 1080px) {
     .title {
         @include font(3rem, 4.3rem, 500);
@@ -164,8 +64,8 @@
         @include font(1.6rem, 2rem, 400, italic);
     }
     .card-title {
-        @include font(2.1rem, 2.8rem, 400);
-            margin-bottom: 5px;
+        @include font(2.1rem, 2.8rem, 700);
+        margin-bottom: 5px;
     }
     .card-text {
         @include font(1.6rem, 2rem, 400);
@@ -174,11 +74,143 @@
         @include font(1.6rem, 2rem, 700);
     }
 }
+
 @media only screen and (max-width: 970px) {
+    .card__text {
+        @include font(1.4rem, 1.8rem, 400);
+    }
+    .card_two {
+        background-position: top center;
+        padding-left: 0;
+    }
+    .card-text {
+        @include font(1.4rem, 1.8rem, 400);
+    }
+    .card-link {
+        @include font(1.4rem, 1.8rem, 700);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header__wrapper {
+        padding: 18.5px 15px;
+    }
+    .intro__wrapper {
+        padding: 32px 15px 255px;
+    }
+    .stories__wrapper {
+        padding: 40px 15px 41px;
+    }
+    .footer__wrapper {
+        padding: 14px 15px 13px; 
+    }
+
+    .button {
+        width: 92px;
+        height: 30px;
+        @include font(1.1rem, 1.5rem, 500);
+        border-radius: 10px;
+    }
+    .button_start {
+        bottom: 32px;
+    }
+    .button_arrow {
+        background: url(../assets/svg/arrow_small.svg), $color-marine;
+        background-repeat: no-repeat;
+        background-position: center left 14px;
+        padding: 0 0 0 30px;
+    }
+
+    .logo__text {
+        display: none;
+    }
+    .header__navigation {
+        display: none;
+    }
+    .button_login {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+
+    .title {
+        @include font(2rem, 3.3rem, 500);
+    }
+
+    .intro__title {
+        @include font(4rem, 5.6rem, 700);
+    }
+    .intro__text {
+        @include font(1.2rem, 1.6rem, 400, italic);
+    }
+
+    .steps__wrapper {
+        padding: 20px 11.5px 20px;
+    }
+
+    .destinations {
+        padding-bottom: 20px;
+    }
+    .stories__wrapper {
+        gap: 15px;
+        padding: 10px 15px 13px;
+    }
+    .title_stories {
+        margin-bottom: 10px;
+    }
+    .story-card {
+        gap: 10px;
+    }
     .card-text {
         @include font(1.2rem, 1.6rem, 400);
     }
     .card-link {
-        @include font(1.2rem, 1.6rem, 400);
+        @include font(1.2rem, 1.6rem, 700);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .search-field {
+        @include font(1.8rem, 2.1rem, 400, italic);
+        padding: 13.5px 9px 13.5px 16.5px;
+    
+        &:focus {
+            @include font(1.8rem, 2.1rem, 400, italic);
+        }
+    }
+    ::placeholder {
+        @include font(1.8rem, 2.1rem, 400, italic);
+    }
+    .button_start {
+        bottom: 10px;
+    }
+
+    .card-title {
+        @include font(1.1rem, 1.3rem, 700);
+    }
+    .card-text {
+        @include font(0.9rem, 1.1rem, 400);
+    }
+    .card-link {
+        @include font(0.9rem, 1.1rem, 700);
+    }
+}
+
+@media only screen and (max-width: 515px) {
+    // .intro__block {
+    //     width: 360px;
+    // }
+    // .search-field {
+    //     width: 360px;
+    // }
+}
+
+@media only screen and (max-width: 390px) {
+    .copyright {
+        display: none;
+    }
+    .footer__wrapper {
+        justify-content: center;
     }
 }

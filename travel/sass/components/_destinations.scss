@@ -20,7 +20,7 @@
     width: 55.55%;
     height: auto;
 
-    img {
+    &__image {
         border-radius: 16px;
         @extend %transition;
 
@@ -29,7 +29,7 @@
         }
     }
 
-    span {
+    &__text {
         position: absolute;
         left: 15px;
         bottom: 42px;

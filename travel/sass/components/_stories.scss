@@ -19,7 +19,7 @@
     flex-direction: row;
     gap: 40px;
 
-    img {
+    &__image {
         width: 33.33%;
         filter: drop-shadow(0px 4px 4px #0D606F);
         border-radius: 16px;
@@ -30,10 +30,11 @@
             transform: scale(1.05);
         }
     }
-}
-.story-card-text {
-    display: flex;
-    flex-direction: column;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
 }
 .card-title {
     @extend %font-add;
