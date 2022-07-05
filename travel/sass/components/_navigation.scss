@@ -40,4 +40,9 @@
         @extend %transition;
     }
 }
+.close-icon,
+.account,
+.social-media {
+    display: none;
+}
 

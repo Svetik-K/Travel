@@ -14,6 +14,9 @@
 }
 
 @media only screen and (max-width: 1080px) {
+    .logo__text {
+        display: none;
+    }
     .title {
         @include font(3rem, 4.3rem, 500);
     }
@@ -36,9 +39,6 @@
 }
 
 @media only screen and (max-width: 970px) {
-    .logo__text {
-        display: none;
-    }
     .navigation {
         gap: 15px; 
     
@@ -83,7 +83,7 @@
         border-radius: 10px;
     }
     .button_start {
-        bottom: 32px;
+        bottom: 18px;
     }
     .button_arrow {
         background: url(../assets/svg/arrow_small.svg), $color-marine;
@@ -103,7 +103,62 @@
     }
     .hamburger {
         display: block;
+        padding: 3px 10px 0 0;
     }
+   
+    .account,
+    .social-media {
+        display: block;
+    }
+    .close-icon {
+        display: block;
+        padding-bottom: 13px;
+        cursor: pointer;
+    }
+    .header__navigation {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        right: -165px;
+        width: 165px;
+        height: 250px;
+        padding: 15.5px 15px 0 15px;
+        background-color: $color-orange;
+        border-radius: 10px;
+        transition: 0.5s;
+        z-index: 4;
+    }
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+        margin: 0;
+        // padding-right: 15px;
+    }
+    .open {
+        right: 0;
+    }
+
+    .hamburger {
+        z-index: 0;
+    }
+    // .hamburger span {
+    //     display: block; 
+    //     transition: 0.5s;
+    // }
+    // .hamburger.active span:nth-child(2){
+    //     opacity: 0;
+    // }
+    // .hamburger.active span:nth-child(1){
+    //     transform: translateY(1.5px) rotate(45deg);
+    // }
+      
+    // .hamburger.active span:nth-child(3){
+    //     transform: translateY(-13px) rotate(-45deg);
+    // }
+
 
     .title {
         @include font(2rem, 3.3rem, 500);
@@ -114,6 +169,9 @@
     }
     .intro__text {
         @include font(1.2rem, 1.6rem, 400, italic);
+    }
+    .search-field {
+        padding: 18.5px 0 18.5px 16.5px;
     }
 
     .steps__wrapper {
@@ -129,6 +187,35 @@
     }
     .title_destinations {
         margin-bottom: 20px;
+    }
+    .destinations__dots {
+        display: none;
+    }
+    .mobile-slider__wrapper {
+        display: block;
+    }
+    .mobile-card__dots {
+        position: absolute;
+        bottom: 12px;
+        left: 162px;
+        width: 36px;
+        height: 8px;
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+    }
+    .mobile-dot {
+        width: 8px;
+        border-radius: 50%;
+        background: rgba(242, 120, 92, 0.5);
+        border: none;
+    }
+    .mobile-dot.active {
+        background-color: $color-orange;
+    }
+
+    .slider__wrapper {
+        display: none;
     }
 
     .stories__wrapper {
@@ -243,9 +330,6 @@
     .header {
         background: url(../assets/images/bg_390.jpg);
     }
-    .hamburger {
-        padding: 3px 10px 0 0;
-    }
 
     .intro {
         background: url(../assets/images/bg_390.jpg);
@@ -288,6 +372,11 @@
     .stories__wrapper {
         gap: 15px;
     }
+    .stories__cards {
+        background: url(../assets/images/stories_390.jpg);
+        background-position: center bottom -54px;
+        background-repeat: no-repeat;
+    }
     .card-title {
         margin-top: 5px;
     }
@@ -295,6 +384,11 @@
         margin-top: -5px;
     }
 
+    .footer {
+        background: url(../assets/images/stories_390.jpg);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    }
     .copyright {
        display: none;
     }

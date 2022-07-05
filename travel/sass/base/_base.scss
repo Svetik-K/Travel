@@ -22,3 +22,18 @@ body {
     max-width: 1440px;
     margin: 0 auto;
 }
+.cover-layer {
+    width: 768px;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.cover-layer.active {
+    display: block;
+}

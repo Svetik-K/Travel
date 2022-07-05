@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./sass/style.css">
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
-    <script src="index.js" defer></script>
     <title>Travel</title>
 </head>
 <body>
@@ -19,11 +18,14 @@
                     <span class="logo__text">Travel Portal</span>
                 </div>
                 <nav class="header__navigation">
+                    <img src="./assets/svg/cross.svg" alt="close icon" class="close-icon">
                     <ul class="navigation">
                        <li><a href="#intro" class="navigation__link">How it Works</a></li>
                        <li><a href="#steps" class="navigation__link">Plan Your Trip</a></li>
                        <li><a href="#destinations" class="navigation__link">Destinations</a></li>
                        <li><a href="#stories" class="navigation__link">Travel Stories</a></li> 
+                       <li><a href="#" class="navigation__link account">Account</a></li>
+                       <li><a href="#footer" class="navigation__link social-media">Social Media</a></li>
                     </ul>
                 </nav>
                 <div class="hamburger">
@@ -35,6 +37,8 @@
             </div>
         </div>   
     </header>
+
+    <div class="cover-layer"></div>
     <!-- Main -->
     <main class="main">
         <section class="intro" id="intro">
@@ -65,18 +69,41 @@
         </section>
         <section class="destinations" id="destinations">
             <h2 class="title title_destinations">POPULAR DESTINATIONS</h2>
-            <div class="destinations__cards">
-                <div class="destinations-card">
-                    <img src="./assets/images/sea.jpg" alt="sea" class="destinations-card__image">
-                    <span class="destinations-card__text">SPAIN</span>
+            <div class="slider__wrapper">
+                <div class="destinations__cards">
+                    <div class="destinations-card card-left">
+                        <img src="./assets/images/sea.jpg" alt="sea" class="destinations-card__image">
+                        <span class="destinations-card__text">SPAIN</span>
+                    </div>
+                    <div class="destinations-card card-active">
+                        <img src="./assets/images/Japan.jpg" alt="temple in Japan" class="destinations-card__image">
+                        <span class="destinations-card__text">JAPAN</span>
+                    </div>
+                    <div class="destinations-card card-right">
+                        <img src="./assets/images/USA.jpg" alt="bridge" class="destinations-card__image">
+                        <span class="destinations-card__text">USA</span>
+                    </div>
                 </div>
-                <div class="destinations-card">
-                    <img src="./assets/images/Japan.jpg" alt="temple in Japan" class="destinations-card__image">
-                    <span class="destinations-card__text">JAPAN</span>
-                </div>
-                <div class="destinations-card">
-                    <img src="./assets/images/USA.jpg" alt="bridge" class="destinations-card__image">
-                    <span class="destinations-card__text">USA</span>
+            </div>
+            <div class="mobile-slider__wrapper">
+                <div class="mobile-slider__cards">
+                    <div class="mobile-card">
+                        <img src="./assets/images/spain_mobile.jpg" alt="sea" class="mobile-card__image">
+                        <span class="mobile-card__text">SPAIN</span>
+                    </div>
+                    <div class="mobile-card">
+                        <img src="./assets/images/japan_mobile.jpg" alt="temple in Japan" class="mobile-card__image">
+                        <span class="mobile-card__text">JAPAN</span>
+                    </div>
+                    <div class="mobile-card">
+                        <img src="./assets/images/usa_mobile.jpg" alt="bridge" class="mobile-card__image">
+                        <span class="mobile-card__text">USA</span>
+                    </div>
+                    <div class="mobile-card__dots">
+                        <div class="mobile-dot active"></div>
+                        <div class="mobile-dot"></div>
+                        <div class="mobile-dot"></div>
+                    </div>
                 </div>
             </div>
             <div class="destinations__dots">
@@ -130,7 +157,7 @@
         </section>
     </main>
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="wrapper footer__wrapper">
             <div class="copyright">All Rights Reserved © Travel Portal</div>
             <ul class="social-icons">
@@ -142,6 +169,6 @@
     </footer> 
       
 
-    
+    <script src="index.js" defer></script>   
 </body>
 </html>

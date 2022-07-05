@@ -19,6 +19,7 @@
 .hamburger {
     display: none;
     @extend %transition;
+    cursor: pointer;
 
     span {
         display: block;
@@ -27,6 +28,7 @@
         margin-bottom: 4px;
         background-color: $color-light;
     }
+
 }
 
 
