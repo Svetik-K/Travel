@@ -1,0 +1,48 @@
+.intro {
+    max-width: $basic-width;
+    margin: 0 auto;
+    background-image: url(../assets/images/intro_bg.jpg);
+    background-position: center -90px;
+    background-repeat: no-repeat;
+}
+.intro__block {
+    position: relative;
+    width: 74.3%;
+}
+.intro__title {
+    width: 100%;
+    @extend %font-add;
+    @include font(8rem, 9.6rem, 700);
+    color: $color-light;
+    margin: 0 0 32px;
+}
+.intro__text {
+    width: 100%;
+    @extend %font-add;
+    @include font(2rem, 2.4rem, 700, italic);
+    letter-spacing: 0.5px;
+    color: $color-light;
+    margin-bottom: 46px;
+}
+.search-field {
+    width: 100%;
+    @extend %font-add;
+    @include font(2.4rem, 2.9rem, 400, italic);
+    padding: 33px 0 33px 41px;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 16px;
+
+    &:focus {
+        @extend %font-add;
+        @include font(2.4rem, 2.9rem, 400, italic);
+        color: $color-orange;
+        outline: none;
+    }
+}
+
+::placeholder {
+    @extend %font-add;
+    @include font(2.4rem, 2.9rem, 400, italic);
+    color: $color-orange;
+}

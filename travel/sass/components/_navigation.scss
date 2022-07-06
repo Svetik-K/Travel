@@ -1,0 +1,45 @@
+.navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.6rem;
+    line-height: 2.1rem; 
+}
+.navigation__link{
+    display: block;
+    position: relative;
+    @extend %font-main;
+    @include font(1.6rem, 2.1rem, 500);
+    color: $color-light;
+    text-decoration: none;
+    margin-right: 42px;
+    @extend %transition;
+
+    &:hover {
+        color: $color-light;
+
+        &::after {
+            width: 100%;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 4px;
+        width: 0%;
+        background-color: $color-light;
+        @extend %transition;
+    }
+}
+.close-icon,
+.account,
+.social-media {
+    display: none;
+}
+

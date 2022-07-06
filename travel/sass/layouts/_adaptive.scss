@@ -1,0 +1,390 @@
+@media only screen and (max-width: 1280px) {
+    .header__wrapper {
+        padding: 18.5px 20px;
+    }
+    .intro__wrapper {
+        padding: 32px 20px 255px;
+    }
+    .stories__wrapper {
+        padding: 40px 20px 41px;
+    }
+    .footer__wrapper {
+        padding: 14px 20px 13px; 
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .logo__text {
+        display: none;
+    }
+    .title {
+        @include font(3rem, 4.3rem, 500);
+    }
+    .intro__title {
+        @include font(6rem, 7.6rem, 700);
+    }
+    .intro__text {
+        @include font(1.6rem, 2rem, 400, italic);
+    }
+    .card-title {
+        @include font(2.1rem, 2.8rem, 700);
+        margin-bottom: 10px;
+    }
+    .card-text {
+        @include font(1.6rem, 2rem, 400);
+    }
+    .card-link {
+        @include font(1.6rem, 2rem, 700);
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .navigation__link{
+        margin-right: 20px;
+    }
+
+    .card__text {
+        @include font(1.4rem, 1.8rem, 400);
+    }
+    .card_two {
+        background-position: top center;
+        padding-left: 0;
+    }
+    .card-text {
+        @include font(1.4rem, 1.8rem, 400);
+    }
+    .card-link {
+        @include font(1.4rem, 1.8rem, 700);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header__wrapper {
+        padding: 26.5px 15px;
+    }
+    .intro__wrapper {
+        padding: 32px 15px 255px;
+    }
+    .stories__wrapper {
+        padding: 40px 15px 41px;
+    }
+    .footer__wrapper {
+        padding: 14px 15px 13px; 
+    }
+
+    .button {
+        width: 92px;
+        height: 30px;
+        @include font(1.1rem, 1.5rem, 500);
+        border-radius: 10px;
+    }
+    .button_start {
+        bottom: 18px;
+    }
+    .button_arrow {
+        background: url(../assets/svg/arrow_small.svg), $color-marine;
+        background-repeat: no-repeat;
+        background-position: center left 14px;
+        padding: 0 0 0 18px;
+    }
+
+    .logo__text {
+        display: none;
+    }
+    .header__navigation {
+        display: none;
+    }
+    .button_login {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        padding: 3px 10px 0 0;
+    }
+   
+    .account,
+    .social-media {
+        display: block;
+    }
+    .close-icon {
+        display: block;
+        padding-bottom: 13px;
+        cursor: pointer;
+    }
+    .header__navigation {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        right: -165px;
+        width: 165px;
+        height: 250px;
+        padding: 15.5px 15px 0 15px;
+        background-color: $color-orange;
+        border-radius: 10px;
+        transition: 0.5s;
+        z-index: 4;
+    }
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+        margin: 0;
+    }
+    .open {
+        right: 0;
+    }
+
+    .hamburger {
+        z-index: 0;
+    }
+
+    .title {
+        @include font(2rem, 3.3rem, 500);
+    }
+
+    .intro__title {
+        @include font(5rem, 6.6rem, 700);
+    }
+    .intro__text {
+        @include font(1.2rem, 1.6rem, 400, italic);
+    }
+    .search-field {
+        padding: 18.5px 0 18.5px 16.5px;
+    }
+
+    .steps__wrapper {
+        padding: 20px 11.5px 20px;
+    }
+    .card {
+        background-size: 70px;
+        height: 113.5px;
+    }
+
+    .destinations {
+        padding-bottom: 20px;
+    }
+    .title_destinations {
+        margin-bottom: 20px;
+    }
+
+    .stories__wrapper {
+        gap: 15px;
+        padding: 10px 15px 13px;
+    }
+    .title_stories {
+        margin-bottom: 10px;
+    }
+    .story-card {
+        gap: 10px;
+    }
+    .card-text {
+        @include font(1.2rem, 1.6rem, 400);
+    }
+    .card-link {
+        @include font(1.2rem, 1.6rem, 700);
+    }
+    .button_see {
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .intro__title {
+        @include font(4rem, 5.6rem, 700);
+    }
+    .search-field {
+        @include font(1.8rem, 2.1rem, 400, italic);
+        padding: 13.5px 0 13.5px 16.5px;
+    
+        &:focus {
+            @include font(1.8rem, 2.1rem, 400, italic);
+        }
+    }
+    ::placeholder {
+        @include font(1.8rem, 2.1rem, 400, italic);
+    }
+    .button_start {
+        bottom: 9px;
+        right: 9px;
+    }
+
+    .card__text {
+        @include font(1rem, 1.2rem, 400);
+    }
+
+    .card-title {
+        @include font(1.1rem, 1.3rem, 700);
+    }
+    .card-text {
+        @include font(0.9rem, 1.1rem, 400);
+    }
+    .card-link {
+        @include font(0.9rem, 1.1rem, 700);
+    }
+    .story-card__image{
+        width: 155px;
+        height: 130px;
+    }
+}
+
+@media only screen and (max-width: 515px) {
+    .intro__block {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 454px) {
+    .card-text {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+        line-height: 1.1rem;
+        height: 8.8rem;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .card_one {
+        width: 97px;
+        background-position: top left;
+        text-align: left;
+    }
+    .card_two {
+        width: 111px;
+        background-position: top center;
+        text-align: center;
+
+        span {
+            padding-bottom: 12px;
+        }
+    }
+    .card_three {
+        width: 98px;
+        background-position: top right;
+        text-align: right;
+    }
+
+}
+
+@media only screen and (max-width: 390px) {
+    .header__wrapper {
+        padding: 43px 15px 24px;
+        background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 75%);
+    }
+    .layer {
+        position: static;
+        background: transparent;
+    }
+    .header {
+        background: url(../assets/images/bg_390.jpg);
+        background-position: top center ;
+    }
+
+    .intro {
+        background: url(../assets/images/bg_390.jpg);
+        background-position: center top -100px;
+        background-repeat: no-repeat;
+    }
+    .intro__wrapper {
+        padding: 42px 15px 61px;
+    }
+    .intro__title {
+        display: none;
+    }
+    .intro__block {
+        width: 100%;
+    }
+    .intro__text {
+        display: none;
+    }
+    .search-field {
+        @include font(1.4rem, 1.7rem, 400, italic);
+        padding: 15.5px 0 15.5px 16.5px;
+    
+        &:focus {
+            @include font(1.4rem, 1.7rem, 400, italic);
+
+        }
+    }
+    ::placeholder {
+        @include font(1.4rem, 1.7rem, 400, italic);
+    }
+
+    .title {
+        @include font(1.4rem, 1.85rem, 500);
+        margin-bottom: 22px;
+    }
+    .steps__wrapper {
+        padding: 20px 15px 20px;
+    }
+
+    .destinations {
+        padding: 0 15px 20px;
+    }
+    .destinations__dots {
+        display: none;
+    }
+    .mobile-slider__wrapper {
+        display: block;
+    }
+    .slider__wrapper {
+        display: none;
+    }
+
+    .title_stories {
+        margin-bottom: 10px;
+    }
+    .stories__wrapper {
+        gap: 15px;
+    }
+    .stories__cards {
+        background: url(../assets/images/stories_390.jpg);
+        background-position: center bottom -54px;
+        background-repeat: no-repeat;
+    }
+    .card-title {
+        margin-top: 5px;
+    }
+    .button_see {
+        margin-top: -5px;
+    }
+
+    .footer {
+        background: url(../assets/images/stories_390.jpg);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    }
+    .copyright {
+       display: none;
+    }
+    .social-icons {
+        padding-left: 10px;
+    }
+    .footer__wrapper {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    .card-title {
+        @include font(0.9rem, 1.2rem, 700);
+        margin-bottom: 5px;
+    }
+    .card-text {
+        @include font(0.7rem, 0.9rem, 400);
+    }
+    .card-link {
+        @include font(0.7rem, 0.9rem, 700);
+    }
+}
+@media only screen and (max-width: 336px) {
+    .card_two {
+
+        span {
+            padding-bottom: 0;
+        }
+    }
+}

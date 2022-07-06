@@ -1,0 +1,27 @@
+.footer {
+    max-width: $basic-width;
+    margin: 0 auto;
+    background: url(../assets/images/stories_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.copyright {
+    @extend %font-main;
+    @include font(1.6rem, 2.1rem, 500);
+    color: $color-light;
+}
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 19px;
+    margin: 0;
+}
+.icon__link img {
+    @extend %transition;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+}

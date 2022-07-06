@@ -1,0 +1,40 @@
+.steps {
+    max-width: $basic-width;
+    margin: 0 auto;
+    background-color: $color-light;
+}
+.title_steps {
+    margin-bottom: 40px;
+}
+.steps__cards {
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    height: 153px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &__text {
+        @extend %font-add;
+        @include font(2rem, 2.4rem, 400);
+        color: $color-marine
+    }
+}
+.card_one {
+    background: url(../assets/svg/cycle.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.card_two {
+    background: url(../assets/svg/calender.svg);
+    background-position: top right 60px;
+    background-repeat: no-repeat;
+    padding-left: 69px;
+}
+.card_three {
+    background: url(../assets/svg/plane.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+}

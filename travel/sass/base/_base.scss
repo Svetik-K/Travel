@@ -1,0 +1,39 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: $color-light;
+    background-size: 100%;
+}
+.title {
+    @extend %font-main;
+    @include font(4rem, 5.3rem, 500);
+    color: $color-orange;
+    text-align: center;
+    margin-top: 0;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.cover-layer {
+    width: 768px;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.cover-layer.active {
+    display: block;
+}
