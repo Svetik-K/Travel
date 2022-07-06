@@ -39,12 +39,8 @@
 }
 
 @media only screen and (max-width: 970px) {
-    .navigation {
-        gap: 15px; 
-    
-        &:last-child {
-            padding-right: 0;
-        }
+    .navigation__link{
+        margin-right: 20px;
     }
 
     .card__text {
@@ -135,7 +131,6 @@
         gap: 10px;
         align-items: flex-end;
         margin: 0;
-        // padding-right: 15px;
     }
     .open {
         right: 0;
@@ -144,21 +139,6 @@
     .hamburger {
         z-index: 0;
     }
-    // .hamburger span {
-    //     display: block; 
-    //     transition: 0.5s;
-    // }
-    // .hamburger.active span:nth-child(2){
-    //     opacity: 0;
-    // }
-    // .hamburger.active span:nth-child(1){
-    //     transform: translateY(1.5px) rotate(45deg);
-    // }
-      
-    // .hamburger.active span:nth-child(3){
-    //     transform: translateY(-13px) rotate(-45deg);
-    // }
-
 
     .title {
         @include font(2rem, 3.3rem, 500);
@@ -187,35 +167,6 @@
     }
     .title_destinations {
         margin-bottom: 20px;
-    }
-    .destinations__dots {
-        display: none;
-    }
-    .mobile-slider__wrapper {
-        display: block;
-    }
-    .mobile-card__dots {
-        position: absolute;
-        bottom: 12px;
-        left: 162px;
-        width: 36px;
-        height: 8px;
-        display: flex;
-        flex-direction: row;
-        gap: 6px;
-    }
-    .mobile-dot {
-        width: 8px;
-        border-radius: 50%;
-        background: rgba(242, 120, 92, 0.5);
-        border: none;
-    }
-    .mobile-dot.active {
-        background-color: $color-orange;
-    }
-
-    .slider__wrapper {
-        display: none;
     }
 
     .stories__wrapper {
@@ -280,7 +231,7 @@
 
 @media only screen and (max-width: 515px) {
     .intro__block {
-        min-width: 360px;
+        width: 100%;
     }
 }
 
@@ -329,6 +280,7 @@
     }
     .header {
         background: url(../assets/images/bg_390.jpg);
+        background-position: top center ;
     }
 
     .intro {
@@ -341,6 +293,9 @@
     }
     .intro__title {
         display: none;
+    }
+    .intro__block {
+        width: 100%;
     }
     .intro__text {
         display: none;
@@ -364,6 +319,19 @@
     }
     .steps__wrapper {
         padding: 20px 15px 20px;
+    }
+
+    .destinations {
+        padding: 0 15px 20px;
+    }
+    .destinations__dots {
+        display: none;
+    }
+    .mobile-slider__wrapper {
+        display: block;
+    }
+    .slider__wrapper {
+        display: none;
     }
 
     .title_stories {
@@ -397,5 +365,26 @@
     }
     .footer__wrapper {
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    .card-title {
+        @include font(0.9rem, 1.2rem, 700);
+        margin-bottom: 5px;
+    }
+    .card-text {
+        @include font(0.7rem, 0.9rem, 400);
+    }
+    .card-link {
+        @include font(0.7rem, 0.9rem, 700);
+    }
+}
+@media only screen and (max-width: 336px) {
+    .card_two {
+
+        span {
+            padding-bottom: 0;
+        }
     }
 }

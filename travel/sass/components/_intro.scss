@@ -7,15 +7,17 @@
 }
 .intro__block {
     position: relative;
-    max-width: 74.3%;
+    width: 74.3%;
 }
 .intro__title {
+    width: 100%;
     @extend %font-add;
     @include font(8rem, 9.6rem, 700);
     color: $color-light;
     margin: 0 0 32px;
 }
 .intro__text {
+    width: 100%;
     @extend %font-add;
     @include font(2rem, 2.4rem, 700, italic);
     letter-spacing: 0.5px;
