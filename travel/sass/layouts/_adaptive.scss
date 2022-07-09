@@ -101,6 +101,9 @@
         display: block;
         padding: 3px 10px 0 0;
     }
+    .navigation__link {
+        margin-right: 0;
+    }
    
     .account,
     .social-media {
@@ -165,7 +168,7 @@
     .destinations {
         padding-bottom: 20px;
     }
-    .title_destinations {
+    .destinations__title {
         margin-bottom: 20px;
     }
 
@@ -173,7 +176,7 @@
         gap: 15px;
         padding: 10px 15px 13px;
     }
-    .title_stories {
+    .stories__title {
         margin-bottom: 10px;
     }
     .story-card {
@@ -334,7 +337,7 @@
         display: none;
     }
 
-    .title_stories {
+    .stories__title {
         margin-bottom: 10px;
     }
     .stories__wrapper {
