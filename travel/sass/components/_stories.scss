@@ -2,7 +2,7 @@
     max-width: $basic-width;
     margin: 0 auto;
 }
-.title_stories {
+.stories__title {
     margin-bottom: 40px;
 }
 .stories__cards {
@@ -22,6 +22,7 @@
 
     &__image {
         width: 33.33%;
+        object-fit: cover;
         filter: drop-shadow(0px 4px 4px #0D606F);
         border-radius: 16px;
         @extend %transition; 
