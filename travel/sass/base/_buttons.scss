@@ -38,3 +38,37 @@
     border: none;
     margin: 0 auto;
 }
+
+.popup-button {
+    width: 100%;
+    height: 56px;
+    @extend %font-main;
+    @include font(2rem, 2.6rem, 400);
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.popup-button_facebook {
+    background-color: #1877F2;
+    background-image: url(../assets/svg/facebook_logo.svg);
+    background-repeat: no-repeat;
+    background-position: center left 163.5px;
+    color: $color-light;
+    padding-left: 39px;
+    margin-bottom: 20px;
+}
+.popup-button_google {
+    background-color: $color-light;
+    background-image: url(../assets/svg/google_logo.svg);
+    background-repeat: no-repeat;
+    background-position: center left 173.5px;
+    color: $color-marine;
+    padding-left: 39px;
+    margin-bottom: 30px;
+}
+.popup-button_sign-in {
+    background-color: $color-marine;
+    color: $color-light;
+    margin-bottom: 10px;
+}
