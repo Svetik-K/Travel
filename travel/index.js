@@ -24,6 +24,24 @@ function closeMenu() {
     document.body.style.overflow = '';
 }
 
+// Login popup
+
+const loginPopup = document.querySelector('.login-popup');
+const loginButton = document.querySelector('.button_login');
+const loginOverlay = document.querySelector('.login-popup__overlay');
+
+loginButton.addEventListener('click', showLoginPopup);
+loginOverlay.addEventListener('click', closeLoginPopup);
+
+function showLoginPopup() {
+    loginPopup.classList.add('login-popup_active');
+    document.body.style.overflow = 'hidden';
+}
+function closeLoginPopup() {
+    loginPopup.classList.remove('login-popup_active');
+    document.body.style.overflow = '';
+}
+
 
 
 // Slider Desktop
@@ -59,3 +77,5 @@ slider.addEventListener('animationend', (animation) => {
     }
     
 });
+
+// Slider Mobile
