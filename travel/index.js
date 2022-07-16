@@ -28,20 +28,52 @@ function closeMenu() {
 
 const loginPopup = document.querySelector('.login-popup');
 const loginButton = document.querySelector('.button_login');
-const loginOverlay = document.querySelector('.login-popup__overlay');
+const signInButton = document.querySelector('.popup-button_sign-in');
+const email = document.getElementById('e-mail');
+const password = document.getElementById('password');
+const accountLink = document.querySelector('.account');
 
 loginButton.addEventListener('click', showLoginPopup);
-loginOverlay.addEventListener('click', closeLoginPopup);
+signInButton.addEventListener('click', signInData);
+accountLink.addEventListener('click', showLoginPopup);
+
 
 function showLoginPopup() {
     loginPopup.classList.add('login-popup_active');
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
 }
 function closeLoginPopup() {
     loginPopup.classList.remove('login-popup_active');
-    document.body.style.overflow = '';
+    // document.body.style.overflow = '';
+}
+function signInData() {
+    let userEmail = email.value;
+    let userPassword = password.value;
+    if(userEmail && userPassword) {
+        alert(`Your e-mail: ${userEmail} 
+Your password: ${userPassword}`);
+    } else {
+        alert(`You should enter Your e-mail and password first`)
+    }
 }
 
+// Sign In popup
+
+const registerButton = document.querySelector('.register-link');
+registerButton.addEventListener('click', createSignIn);
+
+function createSignIn() {
+    document.querySelector('.login-popup__form').style.height = '436px';
+    document.querySelector('.login-popup__title').textContent = 'Create account';
+    document.querySelector('.popup-button_facebook').style.display = 'none';
+    document.querySelector('.popup-button_google').style.display = 'none';
+    document.querySelector('.or').style.display = 'none';
+    document.querySelector('.popup-button_sign-in').textContent = 'Sign Up';
+    document.querySelector('.popup-button_sign-in').style.marginBottom = '26px';
+    document.querySelector('.forgot-link').style.display = 'none';
+    document.querySelector('.register-text').innerHTML = `Already have an account? <a href="#" class="register-link">Log In</a>`;
+    document.querySelector('.register-text').style.paddingTop = '20px';
+}
 
 
 // Slider Desktop

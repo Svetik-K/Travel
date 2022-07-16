@@ -48,27 +48,32 @@
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    @extend %transition;
 }
 .popup-button_facebook {
     background-color: #1877F2;
     background-image: url(../assets/svg/facebook_logo.svg);
     background-repeat: no-repeat;
-    background-position: center left 163.5px;
+    background-position: center left 30.3%;
     color: $color-light;
-    padding-left: 39px;
+    padding-left: 49px;
     margin-bottom: 20px;
 }
 .popup-button_google {
     background-color: $color-light;
     background-image: url(../assets/svg/google_logo.svg);
     background-repeat: no-repeat;
-    background-position: center left 173.5px;
+    background-position: center left 32.3%;
     color: $color-marine;
-    padding-left: 39px;
+    padding-left: 49px;
     margin-bottom: 30px;
 }
 .popup-button_sign-in {
     background-color: $color-marine;
     color: $color-light;
     margin-bottom: 10px;
+
+    &:hover {
+        background-color: $color-dark;
+    }
 }
