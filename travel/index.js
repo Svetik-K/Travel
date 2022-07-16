@@ -8,7 +8,7 @@ const navLinks = document.querySelectorAll('.navigation__link');
 hamburger.addEventListener('click', mobileMenu);
 navLinks.forEach((link) => link.addEventListener('click', closeMenu));
 coverLayer.addEventListener('click', closeMenu);
-navMenu.addEventListener('click', closeMenu);
+navMenu.addEventListener('click', closeMenu); 
 
 function mobileMenu() {
   hamburger.classList.toggle("active");
@@ -36,16 +36,17 @@ const accountLink = document.querySelector('.account');
 loginButton.addEventListener('click', showLoginPopup);
 signInButton.addEventListener('click', signInData);
 accountLink.addEventListener('click', showLoginPopup);
-
+window.addEventListener('click', (e) => {
+    if (e.target == loginPopup) {
+        loginPopup.style.display = "none";
+    }
+}) 
 
 function showLoginPopup() {
-    loginPopup.classList.add('login-popup_active');
+    loginPopup.style.display = 'block';
     // document.body.style.overflow = 'hidden';
 }
-function closeLoginPopup() {
-    loginPopup.classList.remove('login-popup_active');
-    // document.body.style.overflow = '';
-}
+
 function signInData() {
     let userEmail = email.value;
     let userPassword = password.value;

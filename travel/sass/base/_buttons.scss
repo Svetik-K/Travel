@@ -51,22 +51,32 @@
     @extend %transition;
 }
 .popup-button_facebook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #1877F2;
-    background-image: url(../assets/svg/facebook_logo.svg);
-    background-repeat: no-repeat;
-    background-position: center left 30.3%;
     color: $color-light;
-    padding-left: 49px;
     margin-bottom: 20px;
+
+    img {
+        display: inline-block;
+        padding-left: 12px;
+        padding-right: 15px;
+    }
 }
 .popup-button_google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: $color-light;
-    background-image: url(../assets/svg/google_logo.svg);
-    background-repeat: no-repeat;
-    background-position: center left 32.3%;
     color: $color-marine;
-    padding-left: 49px;
     margin-bottom: 30px;
+
+    img {
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 14px;
+    }
 }
 .popup-button_sign-in {
     background-color: $color-marine;
