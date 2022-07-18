@@ -87,3 +87,30 @@
         background-color: $color-dark;
     }
 }
+
+.slider-button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    z-index: 100;
+}
+
+.slider-button_left {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.5%;
+    background-image: url(../assets/svg/slider_arrow_left.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.slider-button_right {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.5%;
+    background-image: url(../assets/svg/slider_arrow_right.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}

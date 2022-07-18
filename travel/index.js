@@ -82,33 +82,80 @@ function createSignIn() {
 const slider = document.querySelector('.destinations__cards');
 const sliderCards = document.querySelectorAll('.destinations-card');
 
-sliderCards.forEach(card => card.addEventListener('click', () => {
-    if(card.classList.contains('card-left')) {
-        slideRight();  
-    } 
-    else if(card.classList.contains('card-right')) {
-        slideLeft();
-    }
-    
-}));
 
-function slideLeft() {
-    slider.classList.add('slide-left');  
-}
-
-function slideRight() {
-    slider.classList.add('slide-right');  
-}
-
-
-slider.addEventListener('animationend', (animation) => {
-    if(animation.animationName === 'slide-to-left') {
-        slider.classList.remove('slide-left');
-
-    } else {
-        slider.classList.remove('slide-right');
-    }
-    
-});
 
 // Slider Mobile
+
+const mobileSlides = document.querySelectorAll('.mobile-card');
+const sliderContainer = document.querySelector('.mobile-slider__cards');
+const nextSlideButton = document.querySelector('.slider-button_right');
+const prevSlideButton = document.querySelector('.slider-button_left');
+const mobileSliderDots = document.querySelector('.mobile-card__dots');
+
+let numberOfSlides = mobileSlides.length;
+let mobileSlideWidth = mobileSlides[0].clientWidth;
+let currentSlide = 0;
+let maxSlide = numberOfSlides - 1;
+
+function initSlider() {
+    mobileSlides.forEach((slide, index) => {
+        slide.style.left = index * 100 + '%';
+    })
+    mobileSlides[0].classList.add('active');
+    createMobileDots();
+}
+
+function createMobileDots() {
+    for(let i = 0; i < numberOfSlides; i++) {
+        let dot = document.createElement('div');
+        dot.classList.add('mobile-dot');
+        mobileSliderDots.append(dot);
+
+        dot.addEventListener('click', () => {
+            goToSlide(i);
+        })
+    }
+    mobileSliderDots.children[0].classList.add('mobile-dot_active');
+}
+
+initSlider();
+
+nextSlideButton.addEventListener('click', () => {
+    if(currentSlide >= maxSlide) {
+        goToSlide(0);
+        return;
+    }
+    currentSlide++;
+    goToSlide(currentSlide);
+});
+
+prevSlideButton.addEventListener('click', () => {
+    if(currentSlide <= 0) {
+        goToSlide(maxSlide);
+        return;
+    }
+    currentSlide--;
+    goToSlide(currentSlide);
+});
+
+function goToSlide(slideNumber) {
+    sliderContainer.style.transform = `translateX(-${mobileSlideWidth * slideNumber}px)`;
+    currentSlide = slideNumber;
+    setActiveClass();
+}
+
+function setActiveClass() {
+    // Set active class for images
+    let currentActive = document.querySelector('.mobile-card.active');
+    currentActive.classList.remove('active');
+    mobileSlides[currentSlide].classList.add('active');
+
+    // Set active class for dots
+    let currentDot = document.querySelector('.mobile-dot.mobile-dot_active');
+    currentDot.classList.remove('mobile-dot_active');
+    mobileSliderDots.children[currentSlide].classList.add('mobile-dot_active');
+}
+
+
+
+
