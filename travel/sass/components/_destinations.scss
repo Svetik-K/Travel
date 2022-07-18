@@ -9,30 +9,29 @@
 }
 
 .slider__wrapper {
+    position: relative;
     width: 100%;
     overflow: hidden;
 }
 .destinations__cards {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2.4%;
-    width: 175%;
-    margin-left: -37.5%;
+    height: 800px;
     margin-bottom: 24px;
+    transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
 }
 .destinations-card {
-    position: relative;
-    width: 31.7%;
-    height: auto;
+    position: absolute;
+    width: 55.55%;
+    height: 100%;
+    margin: 0 30px;
+    cursor: pointer;
 
     &__image {
         width: 100%;
-        height: auto;
+        height: 100%;
         border-radius: 16px;
         @extend %transition;
-
+        object-fit: cover;
     }
 
     &__text {
@@ -45,43 +44,24 @@
     }
 }
 .destinations__dots {
-    width: 80px;
     height: 20px;
     display: flex;
     flex-direction: row;
-    text-align: center;
-    gap: 10px;
-    margin: 0 auto 40px;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 .dot {
     width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: rgba(242, 120, 92, 0.5);
     border: none;
+    margin: 0 5px;
 }
-.dot.active {
+.dot_active {
     background-color: $color-orange;
 }
 
-// @keyframes slide-to-right {
-//     from {right: -37.5%;}
-//     to {right: -55.55%;}
-// }
-
-// .slide-right {
-//     animation-name: slide-to-right;
-//     animation-duration: 2s;
-// }
-
-// @keyframes slide-to-left {
-//     from {left: -37.5%;}
-//     to {left: -55.55%;}
-// }
-
-// .slide-left {
-//     animation-name: slide-to-left;
-//     animation-duration: 2s;
-// }
 
 .mobile-slider__wrapper {
     position: relative;

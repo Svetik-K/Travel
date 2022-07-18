@@ -79,9 +79,67 @@ function createSignIn() {
 
 // Slider Desktop
 
-const slider = document.querySelector('.destinations__cards');
 const sliderCards = document.querySelectorAll('.destinations-card');
+const slider = document.querySelector('.destinations__cards');
+const sliderDots = document.querySelector('.destinations__dots');
 
+let numOfSlides = sliderCards.length;
+let slideWidth = sliderCards[2].clientWidth;
+let curSlide = 2;
+let firstSlide = 0;
+let lastSlide = sliderCards.length - 1
+
+function createSlider() {
+    sliderCards.forEach((slide, index) => {
+        slide.style.left = ((index - 2) * 59.5) + 20 + '%';
+    })
+    sliderCards[2].classList.add('active'); 
+    sliderCards[1].classList.add('left'); 
+    sliderCards[3].classList.add('right');
+
+    sliderDots.children[1].classList.add('dot_active');   
+}
+
+createSlider();
+
+document.addEventListener('click', (e) => {
+    if(e.target.closest('.destinations-card.left')) {
+        curSlide--;
+        goToPreviousCard(curSlide);
+        setActiveDot();
+
+    }
+    else if(e.target.closest('.destinations-card.right')) {
+        curSlide++;
+        goToNextCard(curSlide);
+        setActiveDot();
+    }
+    else if(e.target.closest('.destinations-card.active') && curSlide < 2) {
+        curSlide++;
+        slider.style.transform = `translateX(0%)`;
+        setActiveDot();
+    }
+    else if(e.target.closest('.destinations-card.active') && curSlide > 2) {
+        curSlide--;
+        slider.style.transform = `translateX(0%)`;
+        setActiveDot();
+    }
+})
+
+function goToPreviousCard(cardNumber) {
+    slider.style.transform = `translateX(${slideWidth + 60}px)`;
+    curSlide = cardNumber;  
+}
+function goToNextCard(cardNumber) {
+    slider.style.transform = `translateX(-${slideWidth + 60}px)`;
+    curSlide = cardNumber; 
+}
+
+function setActiveDot() {
+    let currentDot = document.querySelector('.dot.dot_active');
+    currentDot.classList.remove('dot_active');
+    sliderDots.children[curSlide - 1].classList.add('dot_active'); 
+}
 
 
 // Slider Mobile
