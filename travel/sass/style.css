@@ -156,14 +156,14 @@ body {
 
 .popup-button_google img {
   display: inline-block;
-  padding-left: 10px;
+  padding-left: 9px;
   padding-right: 14px;
 }
 
 .popup-button_sign-in {
   background-color: #0D606F;
   color: #FFFFFF;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .popup-button_sign-in:hover {
@@ -177,7 +177,6 @@ body {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  z-index: 100;
 }
 
 .slider-button_left {
@@ -572,6 +571,25 @@ body {
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
+  animation: fadein .5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .login-popup__form {
@@ -580,11 +598,11 @@ body {
   background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .login-popup__wrapper {
-  max-width: 560px;
+  max-width: 86.15%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -713,7 +731,14 @@ body {
   font-style: normal;
   color: #0D606F;
   text-align: center;
-  margin-bottom: 22px;
+  margin-bottom: 26px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(13, 96, 111, 0.5);
+  margin: 0 0 20px;
 }
 
 .register-text {
@@ -725,8 +750,6 @@ body {
   color: rgba(13, 96, 111, 0.5);
   text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
   text-align: center;
-  border-top: 1px solid rgba(13, 96, 111, 0.5);
-  padding-top: 24px;
 }
 
 .register-link {
@@ -1043,6 +1066,9 @@ body {
   }
   .destinations__title {
     margin-bottom: 20px;
+  }
+  .destinations__cards {
+    height: 400px;
   }
   .stories__wrapper {
     gap: 15px;

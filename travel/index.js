@@ -27,6 +27,7 @@ function closeMenu() {
 // Login popup
 
 const loginPopup = document.querySelector('.login-popup');
+const loginForm = document.querySelector('.login-popup__form');
 const loginButton = document.querySelector('.button_login');
 const signInButton = document.querySelector('.popup-button_sign-in');
 const email = document.getElementById('e-mail');
@@ -39,12 +40,13 @@ accountLink.addEventListener('click', showLoginPopup);
 window.addEventListener('click', (e) => {
     if (e.target == loginPopup) {
         loginPopup.style.display = "none";
+        document.body.style.overflow = '';
     }
 }) 
 
 function showLoginPopup() {
     loginPopup.style.display = 'block';
-    // document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
 }
 
 function signInData() {
@@ -54,7 +56,7 @@ function signInData() {
         alert(`Your e-mail: ${userEmail} 
 Your password: ${userPassword}`);
     } else {
-        alert(`You should enter Your e-mail and password first`)
+        alert(`You should enter Your e-mail and password first`);
     }
 }
 
@@ -64,6 +66,7 @@ const registerButton = document.querySelector('.register-link');
 registerButton.addEventListener('click', createSignIn);
 
 function createSignIn() {
+    loginForm.reset();
     document.querySelector('.login-popup__form').style.height = '436px';
     document.querySelector('.login-popup__title').textContent = 'Create account';
     document.querySelector('.popup-button_facebook').style.display = 'none';
@@ -73,7 +76,7 @@ function createSignIn() {
     document.querySelector('.popup-button_sign-in').style.marginBottom = '26px';
     document.querySelector('.forgot-link').style.display = 'none';
     document.querySelector('.register-text').innerHTML = `Already have an account? <a href="#" class="register-link">Log In</a>`;
-    document.querySelector('.register-text').style.paddingTop = '20px';
+    
 }
 
 
@@ -103,13 +106,12 @@ function createSlider() {
 createSlider();
 
 document.addEventListener('click', (e) => {
-    if(e.target.closest('.destinations-card.left')) {
+    if(e.target.closest('.destinations-card.left')  && curSlide === 2) {
         curSlide--;
         goToPreviousCard(curSlide);
         setActiveDot();
-
     }
-    else if(e.target.closest('.destinations-card.right')) {
+    else if(e.target.closest('.destinations-card.right')  && curSlide === 2) {
         curSlide++;
         goToNextCard(curSlide);
         setActiveDot();
@@ -123,6 +125,8 @@ document.addEventListener('click', (e) => {
         curSlide--;
         slider.style.transform = `translateX(0%)`;
         setActiveDot();
+    } else {
+        return;
     }
 })
 
