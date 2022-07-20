@@ -38,3 +38,78 @@
     border: none;
     margin: 0 auto;
 }
+
+.popup-button {
+    width: 100%;
+    height: 56px;
+    @extend %font-main;
+    @include font(2rem, 2.6rem, 400);
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    @extend %transition;
+}
+.popup-button_facebook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1877F2;
+    color: $color-light;
+    margin-bottom: 20px;
+
+    img {
+        display: inline-block;
+        padding-left: 12px;
+        padding-right: 15px;
+    }
+}
+.popup-button_google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-light;
+    color: $color-marine;
+    margin-bottom: 30px;
+
+    img {
+        display: inline-block;
+        padding-left: 9px;
+        padding-right: 14px;
+    }
+}
+.popup-button_sign-in {
+    background-color: $color-marine;
+    color: $color-light;
+    margin-bottom: 8px;
+
+    &:hover {
+        background-color: $color-dark;
+    }
+}
+
+.slider-button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.slider-button_left {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.5%;
+    background-image: url(../assets/svg/slider_arrow_left.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.slider-button_right {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.5%;
+    background-image: url(../assets/svg/slider_arrow_right.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}

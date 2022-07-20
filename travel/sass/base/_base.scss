@@ -7,6 +7,10 @@ body, html {
 * {
     box-sizing: border-box;
 }
+input, textarea{
+    outline: none;
+    border: none;
+}
 body {
     background-color: $color-light;
     background-size: 100%;

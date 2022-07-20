@@ -84,7 +84,7 @@
     .button_arrow {
         background: url(../assets/svg/arrow_small.svg), $color-marine;
         background-repeat: no-repeat;
-        background-position: center left 14px;
+        background-position: center left 11px;
         padding: 0 0 0 18px;
     }
 
@@ -170,6 +170,9 @@
     }
     .destinations__title {
         margin-bottom: 20px;
+    }
+    .destinations__cards {
+        height: 400px;
     }
 
     .stories__wrapper {
@@ -318,6 +321,9 @@
 
     .title {
         @include font(1.4rem, 1.85rem, 500);
+        
+    }
+    .steps__title {
         margin-bottom: 22px;
     }
     .steps__wrapper {

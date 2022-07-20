@@ -37,7 +37,6 @@
             </div>
         </div>   
     </header>
-
     <div class="cover-layer"></div>
     <!-- Main -->
     <main class="main">
@@ -51,6 +50,29 @@
                 </div>
             </div>
         </section>
+        <!-- Login popup -->
+        <div class="login-popup">
+            <form class="login-popup__form" action="#">
+                <div class="login-popup__wrapper">
+                    <h3 class="login-popup__title">Log in to your account</h3>
+                    <button class="popup-button popup-button_facebook"><img src="./assets/svg/facebook_logo.svg">Sign In with Facebook</button>
+                    <button class="popup-button popup-button_google"><img src="./assets/svg/google_logo.svg">Sign In with Google</button>
+                    <span class="or">or</span>
+                    <div class="email-input">
+                        <p>E-mail</p>
+                        <input tabindex=1 type="email" id="e-mail">
+                    </div>
+                    <div class="password-input">
+                        <p>Password</p>
+                        <input tabindex=2 type="password" id="password">
+                    </div>
+                    <button class=" popup-button popup-button_sign-in">Sign In</button>
+                    <a href="#" class="forgot-link">Forgot Your Password?</a>
+                    <p class="line"></p>
+                    <p class="register-text">Don’t have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>   
+        </div>
         <section class="steps" id="steps">
             <div class="wrapper steps__wrapper">
                 <h2 class="title steps__title">3 STEPS TO THE PERFECT TRIP</h2>
@@ -71,17 +93,25 @@
             <h2 class="title destinations__title">POPULAR DESTINATIONS</h2>
             <div class="slider__wrapper">
                 <div class="destinations__cards">
-                    <div class="destinations-card card-left">
+                    <div class="destinations-card">
+                        <img src="./assets/images/USA.jpg" alt="bridge" class="destinations-card__image">
+                        <span class="destinations-card__text">USA</span>
+                    </div>
+                    <div class="destinations-card ">
                         <img src="./assets/images/sea.jpg" alt="sea" class="destinations-card__image">
                         <span class="destinations-card__text">SPAIN</span>
                     </div>
-                    <div class="destinations-card card-active">
+                    <div class="destinations-card">
                         <img src="./assets/images/Japan.jpg" alt="temple in Japan" class="destinations-card__image">
                         <span class="destinations-card__text">JAPAN</span>
                     </div>
-                    <div class="destinations-card card-right">
+                    <div class="destinations-card">
                         <img src="./assets/images/USA.jpg" alt="bridge" class="destinations-card__image">
                         <span class="destinations-card__text">USA</span>
+                    </div>
+                    <div class="destinations-card ">
+                        <img src="./assets/images/sea.jpg" alt="sea" class="destinations-card__image">
+                        <span class="destinations-card__text">SPAIN</span>
                     </div>
                 </div>
             </div>
@@ -99,18 +129,14 @@
                         <img src="./assets/images/usa_mobile.jpg" alt="bridge" class="mobile-card__image">
                         <span class="mobile-card__text">USA</span>
                     </div>
-                    <div class="mobile-card__dots">
-                        <div class="mobile-dot active"></div>
-                        <div class="mobile-dot"></div>
-                        <div class="mobile-dot"></div>
-                    </div>
-                    <img src="./assets/svg/slider_arrow_left.svg" alt="arrow left" class="arrow-left">
-                    <img src="./assets/svg/slider_arrow_right.svg" alt="arrow right" class="arrow-right">
                 </div>
+                <div class="mobile-card__dots"></div>
+                <button class="slider-button slider-button_left"></button>
+                <button class="slider-button slider-button_right"></button>
             </div>
             <div class="destinations__dots">
                 <div class="dot"></div>
-                <div class="dot active"></div>
+                <div class="dot"></div>
                 <div class="dot"></div>
             </div>
             <button class="button button_arrow">Find More</button>
