@@ -41,6 +41,7 @@ window.addEventListener('click', (e) => {
     if (e.target == loginPopup) {
         loginPopup.style.display = "none";
         document.body.style.overflow = '';
+        window.location.reload();
     }
 }) 
 
@@ -55,6 +56,7 @@ function signInData() {
     if(userEmail && userPassword) {
         alert(`Your e-mail: ${userEmail} 
 Your password: ${userPassword}`);
+        loginForm.reset();
     } else {
         alert(`You should enter Your e-mail and password first`);
     }
@@ -67,7 +69,7 @@ registerButton.addEventListener('click', createSignIn);
 
 function createSignIn() {
     loginForm.reset();
-    document.querySelector('.login-popup__form').style.height = '436px';
+    document.querySelector('.login-popup__form').style.minHeight = '436px';
     document.querySelector('.login-popup__title').textContent = 'Create account';
     document.querySelector('.popup-button_facebook').style.display = 'none';
     document.querySelector('.popup-button_google').style.display = 'none';
@@ -75,9 +77,29 @@ function createSignIn() {
     document.querySelector('.popup-button_sign-in').textContent = 'Sign Up';
     document.querySelector('.popup-button_sign-in').style.marginBottom = '26px';
     document.querySelector('.forgot-link').style.display = 'none';
-    document.querySelector('.register-text').innerHTML = `Already have an account? <a href="#" class="register-link">Log In</a>`;
+    document.querySelector('.register-text').innerHTML = `Already have an account? <a href="#" class="login-link">Log In</a>`;
     
+    const loginLink = document.querySelector('.login-link');
+    loginLink.addEventListener('click', () => {
+        returnToLogin();
+    });
 }
+
+function returnToLogin() {
+    document.querySelector('.login-popup__form').style.minHeight = '660px';
+        document.querySelector('.login-popup__title').textContent = 'Log in to your account';
+        document.querySelector('.popup-button_facebook').style.display = 'block';
+        document.querySelector('.popup-button_google').style.display = 'block';
+        document.querySelector('.or').style.display = 'block';
+        document.querySelector('.popup-button_sign-in').textContent = 'Sign In';
+        document.querySelector('.popup-button_sign-in').style.marginBottom = '8px';
+        document.querySelector('.forgot-link').style.display = 'block';
+        document.querySelector('.register-text').innerHTML = `Don’t have an account? <a href="#" class="register-link">Register</a>`;
+
+        const registerButton = document.querySelector('.register-link');
+        registerButton.addEventListener('click', createSignIn);
+}
+
 
 
 // Slider Desktop
@@ -189,6 +211,7 @@ nextSlideButton.addEventListener('click', () => {
     }
     currentSlide++;
     goToSlide(currentSlide);
+    prevSlideButton.classList.add('active');
 });
 
 prevSlideButton.addEventListener('click', () => {

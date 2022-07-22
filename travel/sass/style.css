@@ -9,7 +9,8 @@
   font-family: 'Red Hat Text', sans-serif;
 }
 
-.intro__title, .intro__text, .search-field, .search-field:focus, ::placeholder, .card__text, .card-title, .card-text, .card-link, .login-popup__wrapper span, .login-popup__title, .email-input p, .email-input input, .email-input input:focus, .password-input p, .password-input input, .password-input input:focus, .forgot-link, .register-text, .register-link {
+.intro__title, .intro__text, .search-field, .search-field:focus, ::placeholder, .card__text, .card-title, .card-text, .card-link, .login-popup__wrapper span, .login-popup__title, .email-input p, .email-input input, .email-input input:focus, .password-input p, .password-input input, .password-input input:focus, .forgot-link, .register-text, .login-link,
+.register-link {
   font-family: 'Aleo', serif;
 }
 
@@ -180,10 +181,10 @@ body {
 }
 
 .slider-button_left {
-  top: 50%;
-  transform: translateY(-50%);
+  transform: rotate(180deg);
+  top: 42.8%;
   left: 1.5%;
-  background-image: url(../assets/svg/slider_arrow_left.svg);
+  background-image: url(../assets/svg/slider_arrow_right.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -195,6 +196,18 @@ body {
   background-image: url(../assets/svg/slider_arrow_right.svg);
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.slider-button_left.active {
+  background-image: url(../assets/svg/slider_arrow_right.svg);
+  transform: rotate(180deg);
+  top: 42.8%;
+}
+
+.slider-button_right.unable {
+  background-image: url(../assets/svg/slider_arrow_left.svg);
+  transform: rotate(180deg);
+  top: 42.8%;
 }
 
 .navigation {
@@ -594,11 +607,12 @@ body {
 
 .login-popup__form {
   max-width: 650px;
-  height: 660px;
+  height: fit-content;
+  min-height: 660px;
   background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
-  margin: 50px auto;
+  margin: 10% auto;
 }
 
 .login-popup__wrapper {
@@ -752,6 +766,7 @@ body {
   text-align: center;
 }
 
+.login-link,
 .register-link {
   font-size: 1.5rem;
   line-height: 1.8rem;
@@ -996,6 +1011,21 @@ body {
   }
   .navigation__link {
     margin-right: 0;
+  }
+  .login-popup__form {
+    max-width: 84.6%;
+  }
+  .login-popup__title {
+    font-size: 2.7rem;
+    line-height: 3.3rem;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .login-popup__wrapper span::before {
+    width: 44%;
+  }
+  .login-popup__wrapper span::after {
+    width: 44%;
   }
   .account,
   .social-media {

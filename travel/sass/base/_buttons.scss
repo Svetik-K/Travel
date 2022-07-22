@@ -98,10 +98,10 @@
 }
 
 .slider-button_left {
-    top: 50%;
-    transform: translateY(-50%);
+    transform: rotate(180deg);
+    top: 42.8%;
     left: 1.5%;
-    background-image: url(../assets/svg/slider_arrow_left.svg);
+    background-image: url(../assets/svg/slider_arrow_right.svg);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -112,4 +112,14 @@
     background-image: url(../assets/svg/slider_arrow_right.svg);
     background-position: center;
     background-repeat: no-repeat;
+}
+.slider-button_left.active {
+    background-image: url(../assets/svg/slider_arrow_right.svg);
+    transform: rotate(180deg);
+    top: 42.8%;
+}
+.slider-button_right.unable {
+    background-image: url(../assets/svg/slider_arrow_left.svg);
+    transform: rotate(180deg);
+    top: 42.8%;
 }
