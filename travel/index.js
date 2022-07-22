@@ -16,7 +16,6 @@ function mobileMenu() {
   coverLayer.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
-
 function closeMenu() {
     coverLayer.classList.remove('active');
     hamburger.classList.remove("active");
@@ -101,7 +100,6 @@ function returnToLogin() {
 }
 
 
-
 // Slider Desktop
 
 const sliderCards = document.querySelectorAll('.destinations-card');
@@ -109,59 +107,69 @@ const slider = document.querySelector('.destinations__cards');
 const sliderDots = document.querySelector('.destinations__dots');
 
 let numOfSlides = sliderCards.length;
-let slideWidth = sliderCards[2].clientWidth;
 let curSlide = 2;
-let firstSlide = 0;
-let lastSlide = sliderCards.length - 1
 
 function createSlider() {
     sliderCards.forEach((slide, index) => {
         slide.style.left = ((index - 2) * 59.5) + 20 + '%';
     })
-    sliderCards[2].classList.add('active'); 
-    sliderCards[1].classList.add('left'); 
-    sliderCards[3].classList.add('right');
-
     sliderDots.children[1].classList.add('dot_active');   
 }
 
 createSlider();
 
 document.addEventListener('click', (e) => {
-    if(e.target.closest('.destinations-card.left')  && curSlide === 2) {
-        curSlide--;
-        goToPreviousCard(curSlide);
-        setActiveDot();
+    if(e.target.closest('.destinations-card.left')) {
+        if(curSlide === 2) {
+            curSlide--;
+            goToPreviousCard(curSlide);
+            setActiveDot();
+        } else {
+            return;
+        }
     }
-    else if(e.target.closest('.destinations-card.right')  && curSlide === 2) {
-        curSlide++;
-        goToNextCard(curSlide);
-        setActiveDot();
-    }
-    else if(e.target.closest('.destinations-card.active') && curSlide < 2) {
-        curSlide++;
+    else if(e.target.closest('.destinations-card.right')) {
+        if(curSlide === 2) {
+            curSlide++;
+            goToNextCard(curSlide);
+            setActiveDot();
+        } else {
+            return;
+        }
+    } 
+    else if(e.target.closest('.destinations-card.active')) {
+        if(curSlide < 2) {
+            curSlide++;
+        }
+        else if(curSlide > 2) {
+            curSlide--;
+        }
         slider.style.transform = `translateX(0%)`;
         setActiveDot();
-    }
-    else if(e.target.closest('.destinations-card.active') && curSlide > 2) {
-        curSlide--;
-        slider.style.transform = `translateX(0%)`;
-        setActiveDot();
+    } 
+    else if(e.target.closest('.destinations-card')) {
+        if(curSlide === 1) {
+            goToNextCard(3);
+            setActiveDot();
+        }
+        else if(curSlide === 3) {
+            goToPreviousCard(1);
+            setActiveDot();
+        }
     } else {
         return;
     }
 })
 
 function goToPreviousCard(cardNumber) {
-    slider.style.transform = `translateX(${slideWidth + 60}px)`;
-    curSlide = cardNumber;  
+    slider.style.transform = `translateX(59.5%)`;
+    curSlide = cardNumber;
 }
 function goToNextCard(cardNumber) {
-    slider.style.transform = `translateX(-${slideWidth + 60}px)`;
+    slider.style.transform = `translateX(-59.5%)`;
     curSlide = cardNumber; 
 }
-
-function setActiveDot() {
+function setActiveDot() { 
     let currentDot = document.querySelector('.dot.dot_active');
     currentDot.classList.remove('dot_active');
     sliderDots.children[curSlide - 1].classList.add('dot_active'); 
