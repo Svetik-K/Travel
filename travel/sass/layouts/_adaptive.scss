@@ -105,6 +105,21 @@
         margin-right: 0;
     }
    
+    .login-popup__form {
+        max-width: 84.6%;
+    }
+    .login-popup__title {
+        @include font(2.7rem, 3.3rem, 700);
+    }
+    .login-popup__wrapper span {
+        &::before {
+            width: 44%;
+        }
+        &::after {
+            width: 44%;
+        }
+    }
+
     .account,
     .social-media {
         display: block;
