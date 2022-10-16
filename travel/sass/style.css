@@ -21,6 +21,10 @@ body, html {
   font-size: 10px;
 }
 
+body {
+  position: relative;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -578,13 +582,14 @@ body {
 .login-popup {
   display: none;
   width: 100%;
-  height: 100%;
-  position: fixed;
+  height: 100vh;
+  position: absolute;
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
   animation: fadein .5s;
+  overflow: auto;
 }
 
 @keyframes fadein {
@@ -605,18 +610,23 @@ body {
   }
 }
 
+.shown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .login-popup__form {
-  max-width: 650px;
+  width: 650px;
   height: fit-content;
   min-height: 660px;
   background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
-  margin: 10% auto;
 }
 
 .login-popup__wrapper {
-  max-width: 86.15%;
+  width: 86.15%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;

@@ -4,6 +4,9 @@ body, html {
     scroll-behavior: smooth;
     font-size: 10px;
 }
+body {
+    position: relative;
+}
 * {
     box-sizing: border-box;
 }
