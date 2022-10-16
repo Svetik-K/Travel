@@ -38,14 +38,14 @@ signInButton.addEventListener('click', signInData);
 accountLink.addEventListener('click', showLoginPopup);
 window.addEventListener('click', (e) => {
     if (e.target == loginPopup) {
-        loginPopup.style.display = "none";
+        loginPopup.classList.remove('shown');
         document.body.style.overflow = '';
         window.location.reload();
     }
 }) 
 
 function showLoginPopup() {
-    loginPopup.style.display = 'block';
+    loginPopup.classList.add('shown');
     document.body.style.overflow = 'hidden';
 }
 
